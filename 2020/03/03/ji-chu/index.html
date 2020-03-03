@@ -4,8 +4,24 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="基础, Hexo">
+    <meta name="description" content="基础网络网络五层结构
+应用层：软件获取相关服务
+
+传输层：主机间通信
+
+TCP:面向连接与字节，稳定，速度较慢占资源，
+
+三次握手
+
+客户端向服务器发送SYN
+服务器向客户端发送SYN/ACK
+客户端向服务器发送SYN
+
+
+四次挥手 
+
+客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +29,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello World | Hexo</title>
+    <title>基础 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +319,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">基础</h1>
                 </div>
             </div>
         </div>
@@ -454,16 +470,452 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+                <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><h3 id="网络五层结构"><a href="#网络五层结构" class="headerlink" title="网络五层结构"></a>网络五层结构</h3><ul>
+<li><p>应用层：软件获取相关服务</p>
+</li>
+<li><p>传输层：主机间通信</p>
+<ul>
+<li><p>TCP:面向连接与字节，稳定，速度较慢占资源，</p>
+<ul>
+<li><p>三次握手</p>
+<ul>
+<li>客户端向服务器发送SYN</li>
+<li>服务器向客户端发送SYN/ACK</li>
+<li>客户端向服务器发送SYN</li>
+</ul>
+</li>
+<li><p>四次挥手 </p>
+<ul>
+<li>客户端向服务器发送FIN</li>
+<li>服务器向客户端发送ACK</li>
+<li>服务器向客户端发送FIN</li>
+<li>客户端向服务器发送ACK</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>套接字：IP+端口号</p>
+</li>
+<li><p>UDP:无连接，速度快，但可能会丢失数据，比如qq视频</p>
+</li>
+</ul>
+</li>
+<li><p>网络层：点对点通信，IP</p>
+<ul>
+<li>URI:统一资源标识符，仅标识，身份id</li>
+<li>URL:统一资源定位符,标识+定位，住址</li>
+</ul>
+</li>
+<li><p>传输链层：数据帧传输</p>
+</li>
+<li><p>物理层：信号转换为二进制</p>
+</li>
+</ul>
+<h3 id="页面打开过程"><a href="#页面打开过程" class="headerlink" title="页面打开过程"></a>页面打开过程</h3><ul>
+<li>DNS解析地址</li>
+<li>浏览器向服务器发送请求</li>
+<li>服务器响应并处理请求</li>
+<li>服务器返回html报文</li>
+<li>浏览器解析并渲染html</li>
+</ul>
+<h3 id="运用协议"><a href="#运用协议" class="headerlink" title="运用协议"></a>运用协议</h3><ul>
+<li>DNS解析IP地址</li>
+<li>服务器端TCP</li>
+<li>网络IP</li>
+<li>路由OPSF 开放式最短路径优先,数据传输</li>
+<li>ARP路由与服务器端通信 把IP转换为MAC</li>
+<li>HTTP，访问网页</li>
+</ul>
+<h3 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h3><ul>
+<li><p>1XX</p>
+<ul>
+<li>请求处理中</li>
+</ul>
+</li>
+<li><p>2XX </p>
+<ul>
+<li>200成功</li>
+</ul>
+</li>
+<li><p>3XX</p>
+<ul>
+<li>重定向</li>
+</ul>
+</li>
+<li><p>4XX </p>
+<ul>
+<li>404资源未找到类 </li>
+</ul>
+</li>
+<li><p>5XX </p>
+<ul>
+<li>500服务器内部错误</li>
+</ul>
+</li>
+</ul>
+<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><h3 id="生命周期（状态）"><a href="#生命周期（状态）" class="headerlink" title="生命周期（状态）"></a>生命周期（状态）</h3><ul>
+<li>New初始状态</li>
+<li>Runnable运行状态</li>
+<li>Blocked阻塞 </li>
+<li>Waiting等待唤醒或中断</li>
+<li>Time_Waiting延时等待</li>
+<li>Terminated终止</li>
+</ul>
+<h3 id="悲观锁与乐观锁"><a href="#悲观锁与乐观锁" class="headerlink" title="悲观锁与乐观锁"></a>悲观锁与乐观锁</h3><ul>
+<li><p>悲观锁</p>
+<p>每次去拿数据的时候都认为别人会修改，所以每次在拿数据的时候都会上锁。共享资源每次只给一个线程使用，其它线程阻塞，用完后再把资源转让给其它线程</p>
+</li>
+<li><p>乐观锁</p>
+<p>每次去拿数据的时候都认为别人不会修改，所以不会上锁，但是在更新的时候会判断一下在此期间别人有没有去更新这个数据</p>
+<ul>
+<li><p>版本号实现</p>
+<p>一般是在数据表中加上一个数据版本号version字段，表示数据被修改的次数，当数据被修改时，version值会加一。当线程A要更新数据值时，在读取数据的同时也会读取version值，在提交更新时，若刚才读取到的version值为当前数据库中的version值相等时才更新，否则重试更新操作，直到更新成功。</p>
+</li>
+<li><p>CAS实现</p>
+<p>即compare and swap（比较与交换），是一种有名的无锁算法。无锁编程，即不使用锁的情况下实现多线程之间的变量同步，也就是在没有线程被阻塞的情况下实现变量的同步，所以也叫非阻塞同步</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="死锁的产生"><a href="#死锁的产生" class="headerlink" title="死锁的产生"></a>死锁的产生</h3><ul>
+<li><p>互斥条件</p>
+<ul>
+<li><p>资源只能由一个进程使用</p>
+<ul>
+<li>无解，同步所需要达到的效果</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>请求与保持条件</p>
+<ul>
+<li><p>申请资源阻塞时对原有资源保持占有，不释放</p>
+<ul>
+<li>一次性申请所有资源</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>不剥夺条件</p>
+<ul>
+<li><p>进程现有资源无法被其它进程剥夺，自己使用完毕才会释放</p>
+<ul>
+<li>申请阻塞时，释放已拥有资源</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>循环等待条件</p>
+<ul>
+<li><p>多线程间形成头尾连接的循环</p>
+<ul>
+<li>设置序列</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><ul>
+<li><p>start </p>
+<ul>
+<li>开启一个线程，准备完毕后调用run方法</li>
+</ul>
+</li>
+<li><p>run </p>
+<ul>
+<li>直接执行里面的方法</li>
+</ul>
+</li>
+<li><p>wait（等待）</p>
+</li>
+<li><p>notify（唤醒）</p>
+</li>
+<li><p>sleep（休眠）</p>
+</li>
+</ul>
+<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><ul>
+<li><p>Synchronized（自动解锁）</p>
+<ul>
+<li><p>代码块</p>
+</li>
+<li><p>方法上 </p>
+<ul>
+<li>静态方法上则等于给类加锁</li>
+</ul>
+</li>
+<li><p>拓展：具体优化</p>
+<p><a href="https://blog.csdn.net/weixin_43213517/article/details/89713899" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43213517/article/details/89713899</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>  https://blog.csdn.net/Imobama/article/details/81119812</code></pre><ul>
+<li>Lock（手动unlock）</li>
+<li>volatile(保证变量可见性不会堵塞）</li>
+</ul>
+<h3 id="ThreadLocal类（每个线程获取专属的本地变量）"><a href="#ThreadLocal类（每个线程获取专属的本地变量）" class="headerlink" title="ThreadLocal类（每个线程获取专属的本地变量）"></a>ThreadLocal类（每个线程获取专属的本地变量）</h3><h3 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h3><ul>
+<li><p>Excutor框架</p>
+<ul>
+<li><p>任务</p>
+<ul>
+<li><p>Runnable</p>
+</li>
+<li><p>Callable </p>
+<ul>
+<li>有返回值，能异常检查 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>执行Excutor</p>
+<ul>
+<li><p>继承后ExecutorService</p>
+<ul>
+<li><p>实现后ThreadPoolExecutor</p>
+<p>不允许使用 Executors 去创建，而是通过 ThreadPoolExecutor 的方式，这样的处理方式让写的同学更加明确线程池的运行规则，规避资源耗尽的风险</p>
+<ul>
+<li><p>corePoolSize</p>
+<p>核心线程数，线程数定义了最小可以同时运行的线程数量。</p>
+</li>
+<li><p>maximunPoolSize</p>
+<p>最大线程数，当队列中存放的任务达到队列容量的时候，当前可以同时运行的线程数量变为最大线程数。</p>
+</li>
+<li><p>workQueue</p>
+<p>队列容量，当新任务来的时候会先判断当前运行的线程数量是否达到核心线程数，如果达到的话，新任务就会被存放在队列中。</p>
+<ul>
+<li><p>SynchronousQueue</p>
+<p>这是一个内部没有任何容量的阻塞队列，任何一次插入操作的元素都要等待相对的删除/读取操作，否则进行插入操作的线程就要一直等待，反之亦然。</p>
+</li>
+<li><p>LinkedBlockingQueue</p>
+<p>一个由数组支持的有界阻塞队列。此队列按 FIFO（先进先出）原则对元素进行排序。</p>
+</li>
+<li><p>ArrayBlockingQueue</p>
+<p>基于链表结构，无限队列<br>这个容量就是Integer.MAX_VALUE</p>
+</li>
+</ul>
+</li>
+<li><p>keepAliveTime</p>
+<p>等待时间，当线程池中的线程数量大于 corePoolSize 的时候，如果这时没有新的任务提交，核心线程外的线程不会立即销毁，而是会等待，直到等待的时间超过了 keepAliveTime才会被回收销毁；</p>
+</li>
+<li><p>unit</p>
+<p>keepAliveTime 参数的时间单位。</p>
+</li>
+<li><p>threadFactory</p>
+<p>executor 创建新线程的时候会用到。</p>
+</li>
+<li><p>handler</p>
+<p>饱和策略</p>
+<ul>
+<li><p>AbortPolicy</p>
+<p>抛出 RejectedExecutionException来拒绝新任务的处理。</p>
+</li>
+<li><p>CallerRunsPolicy</p>
+<p>调用执行自己的线程运行任务，也就是直接在调用execute方法的线程中运行(run)被拒绝的任务，如果执行程序已关闭，则会丢弃该任务。另外，这个策略喜欢增加队列容量。如果您的应用程序可以承受此延迟并且你不能任务丢弃任何一个任务请求的话，你可以选择这个策略。</p>
+</li>
+<li><p>DiscardPolicy</p>
+<p>不处理新任务，直接丢弃掉。</p>
+</li>
+<li><p>DiscardOldestPolicy</p>
+<p>此策略将丢弃最早的未处理的任务请求</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Excutors工具类（不推荐）</p>
+<ul>
+<li><p>FixedThreadPool：返回固定数量线程</p>
+<p>不推荐，使用无界队列LinkedBlockingQueue，超过corePoolSize，会加入队列，而队列是无界的，设置的maximumPoolSize等无效。<br>其次，可能会导致oom</p>
+</li>
+<li><p>SingleThreadExcutor：返回一个线程 </p>
+<p>同不推荐，理由同上</p>
+</li>
+<li><p>CashedThreadPool：按线程数分配，空闲的线程</p>
+<p>CachedThreadPool允许创建的线程数量为 Integer.MAX_VALUE ，可能会创建大量线程，从而导致 OOM。也不推荐</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>异步计算的结果(Future)</p>
+</li>
+<li><p>方法比较</p>
+<ul>
+<li><p>submit</p>
+<ul>
+<li>返回Future对象 </li>
+</ul>
+</li>
+<li><p>excute</p>
+<ul>
+<li>无返回值，没法判断成功状态</li>
+</ul>
+</li>
+<li><p>shutdown</p>
+<ul>
+<li>不会接受新任务，队列中的任务完成后关闭</li>
+</ul>
+</li>
+<li><p>shutDownNow</p>
+<ul>
+<li>stop状态，停止队列中的任务</li>
+</ul>
+</li>
+<li><p>isShutDown</p>
+<ul>
+<li>调用shutDown，返回true</li>
+</ul>
+</li>
+<li><p>isTerminated</p>
+<ul>
+<li>调用shutDown，结束队列任务，返回true</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>线程池大小确定 </p>
+<ul>
+<li>CPU 密集型任务(N+1)</li>
+<li>I/O密集型（2N）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="java内存区"><a href="#java内存区" class="headerlink" title="java内存区"></a>java内存区</h2><h3 id="stack栈"><a href="#stack栈" class="headerlink" title="stack栈"></a>stack栈</h3><ul>
+<li>虚拟机栈，方法调用时，会进栈，结束调用或异常时出栈</li>
+</ul>
+<h3 id="heap堆"><a href="#heap堆" class="headerlink" title="heap堆"></a>heap堆</h3><ul>
+<li><p>新生代（Young Generation）</p>
+</li>
+<li><p>老生代（Old Generation）</p>
+</li>
+<li><p>方法区（永生代permanentGeneration）</p>
+<ul>
+<li><p>永生代受jvm约束，替代为元空间，直接内存，受物理约束</p>
+</li>
+<li><p>运行时常量池</p>
+<ul>
+<li>字面量（数据值）</li>
+<li>符号引用（方法名）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="线程-1"><a href="#线程-1" class="headerlink" title="线程"></a>线程</h3><ul>
+<li><p>虚拟机栈</p>
+<ul>
+<li>java 方法 （也就是字节码）服务</li>
+</ul>
+</li>
+<li><p>本地方法栈</p>
+<ul>
+<li>Native</li>
+</ul>
+</li>
+<li><p>程序计数器</p>
+</li>
+</ul>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><ul>
+<li><p>对象的产生</p>
+<ul>
+<li><p>类加载检查</p>
+</li>
+<li><p>分配内存</p>
+<ul>
+<li>指针碰撞：内存规整，以用过与未使用分成两边</li>
+<li>空闲列表：内存不规整，寻找空闲，分配给实例</li>
+</ul>
+</li>
+<li><p>初始化零值</p>
+</li>
+<li><p>设置对象头</p>
+</li>
+<li><p>执行init方法</p>
+</li>
+</ul>
+</li>
+<li><p>对象的内存布局 </p>
+<ul>
+<li><p>对象头</p>
+<ul>
+<li>存储自身的数据</li>
+<li>类型指针：指向对象所属类的地址</li>
+</ul>
+</li>
+<li><p>实例数据  </p>
+</li>
+<li><p>对齐填充： 占位符</p>
+</li>
+</ul>
+</li>
+<li><p>对象的访问定位</p>
+<ul>
+<li><p>句柄</p>
+<p>如果使用句柄的话，那么 Java 堆中将会划分出一块内存来作为句柄池，reference 中存储的就是对象的句柄地址，而句柄中包含了对象实例数据与类型数据各自的具体地址信息；</p>
+</li>
+<li><p>直接指针</p>
+<p>如果使用直接指针访问，那么 Java 堆对象的布局中就必须考虑如何放置访问类型数据的相关信息，而 reference 中存储的直接就是对象的地址。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="Stack栈，先入后出"><a href="#Stack栈，先入后出" class="headerlink" title="Stack栈，先入后出"></a>Stack栈，先入后出</h3><h3 id="queue队列，先入先出"><a href="#queue队列，先入先出" class="headerlink" title="queue队列，先入先出"></a>queue队列，先入先出</h3><h3 id="Array数组，查询快，增删慢"><a href="#Array数组，查询快，增删慢" class="headerlink" title="Array数组，查询快，增删慢"></a>Array数组，查询快，增删慢</h3><h3 id="Linked链表，增删快，查询慢"><a href="#Linked链表，增删快，查询慢" class="headerlink" title="Linked链表，增删快，查询慢"></a>Linked链表，增删快，查询慢</h3><h3 id="B二叉树，特殊（红黑树）"><a href="#B二叉树，特殊（红黑树）" class="headerlink" title="B二叉树，特殊（红黑树）"></a>B二叉树，特殊（红黑树）</h3><h2 id="servlet"><a href="#servlet" class="headerlink" title="servlet"></a>servlet</h2><p>服务器端小程序，是一个接口，定义了java类被浏览器访问到（Tomcat）的规则，非线程安全。</p>
+<h3 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h3><ul>
+<li>get：获取数据</li>
+<li>put：更新数据</li>
+<li>post：创建数据</li>
+</ul>
+<h3 id="jsp"><a href="#jsp" class="headerlink" title="jsp"></a>jsp</h3><p>本质为servlet，先部署后编译，侧重视图解析。<br>servlet侧重逻辑控制。</p>
+<ul>
+<li>九大内置对象</li>
+<li>七大动作</li>
+<li>四种作用域</li>
+<li>三大指令</li>
+</ul>
+<h3 id="转发与重定向"><a href="#转发与重定向" class="headerlink" title="转发与重定向"></a>转发与重定向</h3><ul>
+<li><p>forward</p>
+<p>转发，共享request，用于用户登录后，转发任务，通过request.getRequestDispatcher(地址).forword(req,rsp)</p>
+</li>
+<li><p>redirect</p>
+<p>是利用服务器返回的状态码来实现的.比如302，不能共享数据，用于用户注销后跳转。response.sendRedirect（地址）</p>
+</li>
+<li><p>refresh</p>
+<p>自动刷新，自动刷新不仅可以实现一段时间之后自动跳转到另一个页面，还可以实现一段时间之后自动刷新本页面。Response.setHeader(“Refresh”,”5;URL=地址);</p>
+</li>
+</ul>
+<h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><ul>
+<li>Cookie：客户端</li>
+<li>Session：服务器端</li>
+</ul>
+<h2 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h2><h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><ul>
+<li>饿汉模式 ，类加载时创建对象</li>
+<li>懒汉模式，使用.getInstance,第一次使用时创建</li>
+</ul>
+<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><h3 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h3><ul>
+<li><p>List 有序</p>
+<ul>
+<li>ArrayList</li>
+<li>LinkedList</li>
+</ul>
+</li>
+<li><p>Set不重复</p>
+<ul>
+<li>HashSet</li>
+<li>LinkedHashSet</li>
+<li>TreeSet</li>
+</ul>
+</li>
+</ul>
+<h3 id="Map-键值对"><a href="#Map-键值对" class="headerlink" title="Map 键值对"></a>Map 键值对</h3><ul>
+<li>HashMap</li>
+<li>LinkedHashMap</li>
+<li>HashTable</li>
+</ul>
+<h2 id="Executor框架示意图-jpg"><a href="#Executor框架示意图-jpg" class="headerlink" title="Executor框架示意图.jpg"></a>Executor框架示意图.jpg</h2>
             </div>
             <hr/>
 
@@ -488,7 +940,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://black210.github.io/2020/03/03/hello-world/">https://black210.github.io/2020/03/03/hello-world/</a>
+                    <a href="https://black210.github.io/2020/03/03/ji-chu/">https://black210.github.io/2020/03/03/ji-chu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -689,9 +1141,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2020/03/03/ji-chu/">
                     <div class="card-image">
@@ -725,9 +1178,9 @@ TCP:面向连接与字节，稳定，速度较慢占资源，
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -736,6 +1189,7 @@ TCP:面向连接与字节，稳定，速度较慢占资源，
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -743,7 +1197,7 @@ TCP:面向连接与字节，稳定，速度较慢占资源，
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2020/03/03/hello-world/">
@@ -773,7 +1227,6 @@ TCP:面向连接与字节，稳定，速度较慢占资源，
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
