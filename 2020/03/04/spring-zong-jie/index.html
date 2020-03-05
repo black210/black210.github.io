@@ -517,12 +517,12 @@
 <p><img src="https://raw.githubusercontent.com/black210/images/master/demo/202003/04/152154-874397.png" alt="image-20200304152151532"></p>
 </li>
 </ul>
-<h2 id="4-Spring-IOC"><a href="#4-Spring-IOC" class="headerlink" title="4.Spring IOC"></a>4.Spring IOC</h2><p>IoC（Inverse of Control:控制反转）是一种<strong>设计思想</strong>，就是 <strong>将原本在程序中手动创建对象的控制权，交由Spring框架来管理。</strong> IoC 在其他语言中也有应用，并非 Spring 特有。 <strong>IoC 容器是 Spring 用来实现 IoC 的载体， IoC 容器实际上就是个Map（key，value）,Map 中存放的是各种对象。</strong></p>
-<p>将对象之间的相互依赖关系交给 IoC 容器来管理，并由 IoC 容器完成对象的注入。这样可以很大程度上简化应用的开发，把应用从复杂的依赖关系中解放出来。 <strong>IoC 容器就像是一个工厂一样，当我们需要创建一个对象的时候，只需要配置好配置文件/注解即可，完全不用考虑对象是如何被创建出来的。</strong> 在实际项目中一个 Service 类可能有几百甚至上千个类作为它的底层，假如我们需要实例化这个 Service，你可能要每次都要搞清这个 Service 所有底层类的构造函数，这可能会把人逼疯。如果利用 IoC 的话，你只需要配置好，然后在需要的地方引用就行了，这大大增加了项目的可维护性且降低了开发难度。</p>
+<h2 id="4-Spring-IOC"><a href="#4-Spring-IOC" class="headerlink" title="4.Spring IOC"></a>4.Spring IOC</h2><p>IOC（Inverse of Control:控制反转）是一种<strong>设计思想</strong>，就是 <strong>将原本在程序中手动创建对象的控制权，交由Spring框架来管理。</strong> IoC 在其他语言中也有应用，并非 Spring 特有。 <strong>IOC 容器是 Spring 用来实现 IOC 的载体， IOC 容器实际上就是个Map（key，value）,Map 中存放的是各种对象。</strong></p>
+<p>将对象之间的相互依赖关系交给 IoC 容器来管理，并由 IoC 容器完成对象的注入。这样可以很大程度上简化应用的开发，把应用从复杂的依赖关系中解放出来。 <strong>IOC 容器就像是一个工厂一样，当我们需要创建一个对象的时候，只需要配置好配置文件/注解即可，完全不用考虑对象是如何被创建出来的。</strong> 在实际项目中一个 Service 类可能有几百甚至上千个类作为它的底层，假如我们需要实例化这个 Service，你可能要每次都要搞清这个 Service 所有底层类的构造函数，这可能会把人逼疯。如果利用 IOC 的话，你只需要配置好，然后在需要的地方引用就行了，这大大增加了项目的可维护性且降低了开发难度。</p>
 <p>Spring 时代我们一般通过 XML 文件来配置 Bean，后来开发人员觉得 XML 文件来配置不太好，于是 SpringBoot 注解配置就慢慢开始流行起来。</p>
 <p>推荐阅读：<a href="https://www.zhihu.com/question/23277575/answer/169698662" target="_blank" rel="noopener">https://www.zhihu.com/question/23277575/answer/169698662</a></p>
 <p><img src="https://camo.githubusercontent.com/faa0326fb04c227b78b8e640b7a75da76a612f1f/68747470733a2f2f6d792d626c6f672d746f2d7573652e6f73732d636e2d6265696a696e672e616c6979756e63732e636f6d2f323031392d372f537072696e67494f432545352538382539442545352541372538422545352538432539362545382542462538372545372541382538422e706e67" alt="Spring IoC的初始化过程"></p>
-<p>IoC源码阅读</p>
+<p>IOC源码阅读</p>
 <ul>
 <li><a href="https://javadoop.com/post/spring-ioc" target="_blank" rel="noopener">https://javadoop.com/post/spring-ioc</a></li>
 </ul>
@@ -632,7 +632,7 @@
 <li><strong>第一种方式：使用默认无参构造函数</strong></li>
 </ul>
 <p>在默认情况下：它会根据默认无参构造函数来创建类对象。如果 bean 中没有默认无参构造函数，将会创建失败。</p>
-<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>accountService<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.itheima.service.impl.AccountServiceImpl<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></code></pre>
+<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>accountService<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.xxx.service.impl.AccountServiceImpl<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></code></pre>
 <ul>
 <li><strong>第二种方式：spring     管理静态工厂-使用静态工厂的方法创建对象</strong></li>
 </ul>
@@ -647,11 +647,11 @@
     <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 </code></pre>
-<p>此种方式是:使用 StaticFactory 类中的静态方法 createAccountService 创建对象，并存入 spring 容器</p>
+<p>此种方式是:使用 StaticFactory 类中的静态方法 <code>createAccountService</code> 创建对象，并存入 spring 容器</p>
 <p>id 属性：指定 bean 的 id，用于从容器中获取</p>
 <p>class 属性：指定静态工厂的全限定类名</p>
 <p>factory-method 属性：指定生产对象的静态方法</p>
-<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>accountService<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.itheima.factory.StaticFactory<span class="token punctuation">"</span></span> 
+<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>accountService<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.xxx.factory.StaticFactory<span class="token punctuation">"</span></span> 
       <span class="token attr-name">factory-method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>createAccountService<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span></code></pre>
 <ul>
 <li><strong>第三种方式：spring     管理实例工厂-使用实例工厂的方法创建对象</strong></li>
@@ -669,7 +669,7 @@
 <p>此种方式是：先把工厂的创建交给 spring 来管理。然后在使用工厂的 bean 来调用里面的方法</p>
 <p>factory-bean 属性：用于指定实例工厂 bean 的 id。</p>
 <p>factory-method 属性：用于指定实例工厂中创建对象的方法。</p>
-<pre class=" language-xml"><code class="language-xml">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>instancFactory<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.itheima.factory.InstanceFactory<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span>
+<pre class=" language-xml"><code class="language-xml">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>instancFactory<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.xxx.factory.InstanceFactory<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>accountService<span class="token punctuation">"</span></span>
         <span class="token attr-name">factory-bean</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>instancFactory<span class="token punctuation">"</span></span>
         <span class="token attr-name">factory-method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>createAccountService<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span>
@@ -735,12 +735,19 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>age<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>21<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
     &lt;property name="birthday" ref="now"<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span></code></pre>
-<p><strong>注入集合属性</strong></p>
-<p>用于给List结构集合注入的标签：</p>
-<p>​      list array set</p>
-<p> 用于个Map结构集合注入的标签:</p>
-<p>​      map props</p>
-<p>   <strong>若结构相同，标签可以互换</strong></p>
+<ul>
+<li><p><strong>注入集合属性</strong></p>
+<ul>
+<li><p>用于给List结构集合注入的标签：</p>
+<p>​      list     array     set</p>
+</li>
+<li><p>用于个Map结构集合注入的标签:</p>
+<p>​      map     props</p>
+<p><strong>若结构相同，标签可以互换</strong></p>
+</li>
+</ul>
+</li>
+</ul>
 <pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>accountService3<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.xxx.service.impl.AccountServiceImpl3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>myStrs<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>set</span><span class="token punctuation">></span></span>
@@ -782,8 +789,24 @@
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>map</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span></code></pre>
-<h5 id="（3）使用注解提供"><a href="#（3）使用注解提供" class="headerlink" title="（3）使用注解提供"></a>（3）使用注解提供</h5><p>稍后将详细说明</p>
-<h3 id="4-4注解总结"><a href="#4-4注解总结" class="headerlink" title="4.4注解总结"></a>4.4注解总结</h3><h4 id="4-4-1用于创建对象的"><a href="#4-4-1用于创建对象的" class="headerlink" title="4.4.1用于创建对象的"></a>4.4.1用于创建对象的</h4><p>他们的作用就和在XML配置文件中编写一个<bean>标签实现的功能是一样的<br>    • <strong>Component</strong> :<br>          作用：用于把当前类对象存入spring容器中<br>          属性：<br>            ○ value：用于指定bean的id。当我们不写时，它的<strong>默认值是当前类名，且首字母改小写</strong>。<br>    • <strong>Controller</strong>：一般用在表现层<br>    • <strong>Service</strong>：一般用在业务层<br>    • <strong>Repository</strong>：一般用在持久层<br>              以上三个注解他们的作用和属性与Component是一模一样。</p>
+<h5 id="（3）使用注解提供"><a href="#（3）使用注解提供" class="headerlink" title="（3）使用注解提供"></a>（3）使用注解提供</h5><p>​        稍后将详细说明</p>
+<h3 id="4-4注解总结"><a href="#4-4注解总结" class="headerlink" title="4.4注解总结"></a>4.4注解总结</h3><h4 id="4-4-1用于创建对象的"><a href="#4-4-1用于创建对象的" class="headerlink" title="4.4.1用于创建对象的"></a>4.4.1用于创建对象的</h4><p>他们的作用就和在XML配置文件中编写一个<bean>标签实现的功能是一样的</p>
+<ul>
+<li><p><strong>Component</strong> :</p>
+<p>​          作用：用于把当前类对象存入spring容器中</p>
+<p>​          属性：</p>
+<ul>
+<li>value：用于指定bean的id。当我们不写时，它的<strong>默认值是当前类名，且首字母改小写</strong>。</li>
+</ul>
+</li>
+<li><p><strong>Controller</strong>：一般用在表现层</p>
+</li>
+<li><p><strong>Service</strong>：一般用在业务层</p>
+</li>
+<li><p><strong>Repository</strong>：一般用在持久层</p>
+</li>
+</ul>
+<p>​              以上三个注解他们的作用和属性与Component是一模一样。</p>
 <p><strong>细节</strong>：如果注解中<strong>有且只有一个</strong>属性要赋值时，且名称是value，<strong>value在赋值是可以不写</strong>。<br>         他们三个是spring框架为我们提供明确的三层使用的注解，使我们的三层对象更加清晰</p>
 <h4 id="4-4-2用于注入数据的"><a href="#4-4-2用于注入数据的" class="headerlink" title="4.4.2用于注入数据的"></a><strong>4.4.2用于注入数据的</strong></h4><p>他们的作用就和在xml配置文件中的bean标签中写一个<property>标签的作用是一样的<br>            相当于：</p>
 <pre class=" language-xml"><code class="language-xml">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -889,10 +912,22 @@
 <li><p><strong>Configuration</strong></p>
 <ul>
 <li><p>作用：指定当前类是一个<strong>配置类</strong>,它的作用和bean.xml是一样的.</p>
-<p>获取容器时需要使用AnnotationApplicationContext(有@Configuration注解的类.class)。</p>
+<p>获取容器时需要使用<code>AnnotationApplicationContext</code>(有@Configuration注解的类.class)。</p>
 </li>
-<li><p>细节：当配置类作为AnnotationConfigApplicationContext对象创建的参数时，该注解可以不写。</p>
+<li><p>细节：</p>
+<ul>
+<li>当配置类作为AnnotationConfigApplicationContext对象创建参数时，该注解可以不写</li>
+</ul>
 </li>
+</ul>
+</li>
+</ul>
+<p>   @Configuration这个注解什么时候必须写，什么时候可以省略</p>
+<ul>
+<li>如果在AnnotationConfigApplicationContext（xxx.class）中指定了该配置文件的字节码对象，就可以省略不写</li>
+<li>没有指定，就要在主配置文件中要写，扫描子配置类，那么子配置类也必须要写，也可以通过@Import（JdbcConfig.class）来指定子配置类，如果使用也可以省略@Configuration</li>
+</ul>
+<ul>
 <li><p><strong>ComponentScan</strong></p>
 <ul>
 <li>作用：用于通过注解指定spring在创建容器时要<strong>扫描的包</strong></li>
@@ -901,14 +936,12 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <p>我们使用此注解就等同于在xml中配置了:</p>
 <pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">context:</span>component-scan</span> <span class="token attr-name">base-package</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.xxx<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">context:</span>component-scan</span><span class="token punctuation">></span></span>
     <span class="token comment" spellcheck="true">&lt;!--配置哪些注解不扫描--></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">context:</span>exclude-filter</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>annotation<span class="token punctuation">"</span></span> <span class="token attr-name">expression</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>org.springframework.stereotype.Controller<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
 <pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@ComponentScan</span><span class="token punctuation">(</span><span class="token string">"com.xxx"</span><span class="token punctuation">)</span></code></pre>
-<ul>
+</li>
 <li><p><strong>Bean</strong></p>
 <ul>
 <li>作用：该注解<strong>只能写在方法上</strong>，表明使用此方法创建一个对象。用于把当前方法的返回值作为bean对象存入spring的ioc容器中。</li>
@@ -917,8 +950,6 @@
 </ul>
 </li>
 <li>细节：当我们使用注解配置方法时，如果方法有参数，spring框架会去容器中查找有没有可用的bean对象。查找的方式和Autowired注解的作用是一样的。</li>
-</ul>
-</li>
 </ul>
 <pre class=" language-xml"><code class="language-xml">  <span class="token comment" spellcheck="true">&lt;!--配置QueryRunner--></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>runner<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>org.apache.commons.dbutils.QueryRunner<span class="token punctuation">"</span></span> <span class="token attr-name">scope</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>prototype<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -1035,51 +1066,70 @@
 </ul>
 <h3 id="5-3基于xml配置"><a href="#5-3基于xml配置" class="headerlink" title="5.3基于xml配置"></a>5.3基于xml配置</h3><h4 id="5-3-1实现思路"><a href="#5-3-1实现思路" class="headerlink" title="5.3.1实现思路"></a>5.3.1实现思路</h4><p>1、把通知Bean也交给spring来管理<br>2、使用aop:config标签表明开始AOP的配置<br>3、使用aop:aspect标签表明配置切面<br>4、在aop:aspect标签的内部使用对应标签来配置通知的类型</p>
 <h4 id="5-3-2标签介绍"><a href="#5-3-2标签介绍" class="headerlink" title="5.3.2标签介绍"></a>5.3.2标签介绍</h4><ul>
-<li><strong>aop:config:</strong><br>作用：用于声明开始 aop 的配置</li>
+<li><p><strong>aop:config:</strong></p>
+<p>作用：用于声明开始 aop 的配置</p>
+</li>
 </ul>
 <pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">aop:</span>config</span><span class="token punctuation">></span></span>
 <span class="token comment" spellcheck="true">&lt;!-- 配置的代码都写在此处 --></span> 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">aop:</span>config</span><span class="token punctuation">></span></span></code></pre>
 <ul>
-<li><strong>aop:aspect:</strong><br>作用：<pre><code>用于配置切面。</code></pre>属性：<pre><code>id：给切面提供一个唯一标识。
-ref：引用配置好的通知类 bean 的 id。</code></pre></li>
+<li><p><strong>aop:aspect:</strong></p>
+<p>作用：    用于配置切面。</p>
+<p>属性：</p>
+<pre><code>id：给切面提供一个唯一标识。</code></pre><p>​    ref：引用配置好的通知类 bean 的 id。</p>
+</li>
 </ul>
 <pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">aop:</span>aspect</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>txAdvice<span class="token punctuation">"</span></span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>txManager<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token comment" spellcheck="true">&lt;!--配置通知的类型要写在此处--></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">aop:</span>aspect</span><span class="token punctuation">></span></span></code></pre>
 <ul>
-<li><p><strong>aop:pointcut：</strong><br>作用：</p>
-<pre><code>用于配置切入点表达式。就是指定对哪些类的哪些方法进行增强。</code></pre><p>属性：</p>
-<pre><code>expression：用于定义切入点表达式。</code></pre><p>​    id：用于给切入点表达式提供一个唯一标识</p>
+<li><p><strong>aop:pointcut：</strong> </p>
+<p>作用：用于配置切入点表达式。就是指定对哪些类的哪些方法进行增强。</p>
+<p>属性：<br>  expression：用于定义切入点表达式。</p>
+<p>​    id：用于给切入点表达式提供一个唯一标识</p>
 </li>
 </ul>
 <pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">aop:</span>pointcut</span> <span class="token attr-name">expression</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>execution( public void com.itheima.service.impl.AccountServiceImpl.transfer( java.lang.String, java.lang.String, java.lang.Float) )<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pt1<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></code></pre>
 <ul>
-<li><p><strong>aop:before</strong><br>作用：</p>
-<pre><code>用于配置前置通知。指定增强的方法在切入点方法之前执行</code></pre><p>属性：</p>
-<pre><code>method:用于指定通知类中的增强方法名称ponitcut-ref：用于指定切入点的表达式的引用</code></pre><p>​    poinitcut：用于指定切入点表达式<br>执行时间点：<br>​    切入点方法执行之前执行</p>
+<li><p><strong>aop:before</strong></p>
+<p>作用：用于配置前置通知。指定增强的方法在切入点方法之前执行</p>
+<p>属性：</p>
+<p>​    method:用于指定通知类中的增强方法名称ponitcut-ref：用于指定切入点的表达式的引用</p>
+<p>​    poinitcut：用于指定切入点表达式</p>
+<p>执行时间点：切入点方法执行之前执行</p>
 </li>
 </ul>
 <pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">aop:</span>before</span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>beginTransaction<span class="token punctuation">"</span></span> <span class="token attr-name">pointcut-ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pt1<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></code></pre>
 <ul>
-<li><strong>aop:after-returning</strong><br>作用：<pre><code>用于配置后置通知</code></pre>属性：<pre><code>method：指定通知中方法的名称。
-pointct：定义切入点表达式
-pointcut-ref：指定切入点表达式的引用</code></pre>执行时间点：<pre><code>切入点方法正常执行之后。它和异常通知只能有一个执行</code></pre></li>
+<li><p><strong>aop:after-returning</strong></p>
+<p>作用：用于配置后置通知</p>
+<p>属性：</p>
+<p>​    method：指定通知中方法的名称。</p>
+<p>​    pointct：定义切入点表达式</p>
+<p>​    pointcut-ref：指定切入点表达式的引用</p>
+<p>执行时间点：切入点方法正常执行之后。它和异常通知只能有一个执行</p>
+</li>
 </ul>
 <pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">aop:</span>after-returning</span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>commit<span class="token punctuation">"</span></span> <span class="token attr-name">pointcut-ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pt1<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></code></pre>
 <ul>
-<li><strong>aop:after-throwing</strong><br>作用：<pre><code>用于配置异常通知</code></pre>属性：<pre><code>method：指定通知中方法的名称。
-pointct：定义切入点表达式
-pointcut-ref：指定切入点表达式的引用</code></pre>执行时间点：<pre><code>切入点方法执行产生异常后执行。它和后置通知只能执行一个</code></pre></li>
+<li><p><strong>aop:after-throwing</strong></p>
+<p>作用：用于配置异常通知</p>
+<p>属性：</p>
+<pre><code>method：指定通知中方法的名称。</code></pre><p>​    pointct：定义切入点表达式</p>
+<p>​    pointcut-ref：指定切入点表达式的引用</p>
+<p>执行时间点：切入点方法执行产生异常后执行。它和后置通知只能执行一个</p>
+</li>
 </ul>
 <pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">aop:</span>after-throwing</span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>rollback<span class="token punctuation">"</span></span> <span class="token attr-name">pointcut-ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pt1<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></code></pre>
 <ul>
-<li><p><strong>aop:after</strong><br>作用：</p>
-<pre><code>用于配置最终通知</code></pre><p>属性：</p>
-<pre><code>method：指定通知中方法的名称。pointct：定义切入点表达式
-pointcut-ref：指定切入点表达式的引用</code></pre><p>执行时间点：</p>
-<pre><code>无论切入点方法执行时是否有异常，它都会在其后面执行。</code></pre></li>
+<li><strong>aop:after</strong><br>作用：用于配置最终通知</li>
 </ul>
+<p>属性：</p>
+<p>  ​    method：指定通知中方法的名称。</p>
+<p>​    pointct：定义切入点表达式</p>
+<p>  ​    pointcut-ref：指定切入点表达式的引用</p>
+<p>  执行时间点：无论切入点方法执行时是否有异常，它都会在其后面执行。</p>
 <pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">aop:</span>after</span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>release<span class="token punctuation">"</span></span> <span class="token attr-name">pointcut-ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pt1<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></code></pre>
 <h4 id="5-3-3Execution表达式"><a href="#5-3-3Execution表达式" class="headerlink" title="5.3.3Execution表达式"></a>5.3.3Execution表达式</h4><ul>
 <li><p>表达式语法：    </p>
@@ -1137,7 +1187,7 @@ pointcut-ref：指定切入点表达式的引用</code></pre><p>执行时间点�
 </li>
 </ul>
 <h4 id="5-3-4环绕通知及示例"><a href="#5-3-4环绕通知及示例" class="headerlink" title="5.3.4环绕通知及示例"></a>5.3.4环绕通知及示例</h4><p>示意图如下：</p>
-<p>![计算机生成了可选文字: @<a href="https://raw.githubusercontent.com/Thobian/typora-image/master/demo/202003/05/105202-349568.jpeg" target="_blank" rel="noopener">〕verride 个的Oke方法存流行是环绕知 publicObjectinvoke(Objectproxy,Methodmethod,Object[]引、(s)thr、0射sThrowable{ if(“test”。equals(method。getName retur、nmethod.invoke(accountservice,at、gs), ObjectrtVa1ue try{ //1．开启事务 null; txManager。beginTr、ansaction method。invoke(accountSer、vice, rtVa1ue txManager。commit（）, ／/4．返回结果 retur、nrtVa1ue }catch（Exceptione){ /巧．回滚操作 txManager。’、011back(), thro到newRuntimeException(e }finally{ /邝．释放遵接 txManager。release 在环绕知中有明的切 at、gs),</a></p>
+<p><img src="https://raw.githubusercontent.com/black210/images/master/demo/202003/05/151339-129171.jpeg" alt="环绕通知1"></p>
 <p>配置xml：</p>
 <pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!-- 配置srping的Ioc,把service对象配置进来--></span>
     <span class="token comment" spellcheck="true">&lt;!--1、把通知Bean也交给spring来管理
@@ -1307,7 +1357,7 @@ pointcut-ref：指定切入点表达式的引用</code></pre><p>执行时间点�
 <pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!-- 开启spring对注解AOP的支持 --></span> 
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">aop:</span>aspectj-autoproxy</span><span class="token punctuation">/></span></span></code></pre>
 <h4 id="5-4-3拓展"><a href="#5-4-3拓展" class="headerlink" title="5.4.3拓展"></a>5.4.3拓展</h4><p>测试发现如下问题</p>
-<p><img src="https://raw.githubusercontent.com/Thobian/typora-image/master/demo/202003/05/133723-852415.png" alt="未命名图片"></p>
+<p><img src="https://raw.githubusercontent.com/black210/images/master/demo/202003/05/151142-677471.png" alt="环绕通知2"></p>
 <p>结论：</p>
 <p><strong>使用<code>注解</code>方式，会出现</strong> <strong>最终与后置通知顺序出现问题，使用环绕通知不会出现该问题</strong></p>
 <h2 id="6-事务"><a href="#6-事务" class="headerlink" title="6.事务"></a>6.事务</h2><h3 id="6-1事务概述"><a href="#6-1事务概述" class="headerlink" title="6.1事务概述"></a>6.1事务概述</h3><h4 id="6-1-1Spring管理事务的方式"><a href="#6-1-1Spring管理事务的方式" class="headerlink" title="6.1.1Spring管理事务的方式"></a>6.1.1Spring管理事务的方式</h4><ol>
@@ -1369,7 +1419,10 @@ pointcut-ref：指定切入点表达式的引用</code></pre><p>执行时间点�
 </li>
 <li><p><strong>其他情况：</strong></p>
 <ul>
-<li><strong>TransactionDefinition.PROPAGATION_NESTED：</strong> 如果当前存在事务，则创建一个事务作为当前事务的嵌套事务来运行；如果当前没有事务，则该取值等价于TransactionDefinition.PROPAGATION_REQUIRED。</li>
+<li><p><strong>TransactionDefinition.PROPAGATION_NESTED：</strong> 如果当前存在事务，则创建一个事务作为当前事务</p>
+<p>的嵌套事务来运行；如果当前没有事务，则该取值等价于</p>
+<p>TransactionDefinition.PROPAGATION_REQUIRED。</p>
+</li>
 </ul>
 </li>
 </ul>
