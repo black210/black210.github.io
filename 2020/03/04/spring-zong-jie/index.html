@@ -1077,7 +1077,8 @@
 <li><p><strong>aop:aspect:</strong></p>
 <p>作用：    用于配置切面。</p>
 <p>属性：</p>
-<pre><code>id：给切面提供一个唯一标识。</code></pre><p>​    ref：引用配置好的通知类 bean 的 id。</p>
+<p>​    id：给切面提供一个唯一标识。</p>
+<p>​    ref：引用配置好的通知类 bean 的 id。</p>
 </li>
 </ul>
 <pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">aop:</span>aspect</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>txAdvice<span class="token punctuation">"</span></span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>txManager<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -1086,7 +1087,8 @@
 <ul>
 <li><p><strong>aop:pointcut：</strong> </p>
 <p>作用：用于配置切入点表达式。就是指定对哪些类的哪些方法进行增强。</p>
-<p>属性：<br>  expression：用于定义切入点表达式。</p>
+<p>属性：</p>
+<p>expression：用于定义切入点表达式。</p>
 <p>​    id：用于给切入点表达式提供一个唯一标识</p>
 </li>
 </ul>
@@ -1116,7 +1118,8 @@
 <li><p><strong>aop:after-throwing</strong></p>
 <p>作用：用于配置异常通知</p>
 <p>属性：</p>
-<pre><code>method：指定通知中方法的名称。</code></pre><p>​    pointct：定义切入点表达式</p>
+<p>​    method：指定通知中方法的名称。</p>
+<p>​    pointct：定义切入点表达式</p>
 <p>​    pointcut-ref：指定切入点表达式的引用</p>
 <p>执行时间点：切入点方法执行产生异常后执行。它和后置通知只能执行一个</p>
 </li>
@@ -1127,7 +1130,7 @@
 </ul>
 <p>属性：</p>
 <p>  ​    method：指定通知中方法的名称。</p>
-<p>​    pointct：定义切入点表达式</p>
+<p>​      pointct：定义切入点表达式</p>
 <p>  ​    pointcut-ref：指定切入点表达式的引用</p>
 <p>  执行时间点：无论切入点方法执行时是否有异常，它都会在其后面执行。</p>
 <pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">aop:</span>after</span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>release<span class="token punctuation">"</span></span> <span class="token attr-name">pointcut-ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pt1<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></code></pre>
