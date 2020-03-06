@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Spring总结, Hexo">
+    <meta name="keywords" content="Spring 总结, Hexo">
     <meta name="description" content="Spring总结前言引用链接:https://github.com/Snailclimb/JavaGuide/blob/master/docs/system-design/framework/spring/SpringInterviewQu">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Spring总结 | Hexo</title>
+    <title>Spring 总结 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +303,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Spring总结</h1>
+                    <h1 class="description center-align post-title">Spring 总结</h1>
                 </div>
             </div>
         </div>
@@ -423,12 +423,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Spring/">
+                                <span class="chip bg-color">Spring</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                学习笔记
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -437,14 +450,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-04
+                    2020-03-05
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-05
+                    2020-03-06
                 </div>
                 
 
@@ -458,7 +471,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    47 分
+                    48 分
                 </div>
                 
 				
@@ -805,7 +818,7 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span></code></pre>
 <h5 id="（3）使用注解提供"><a href="#（3）使用注解提供" class="headerlink" title="（3）使用注解提供"></a>（3）使用注解提供</h5><p>​        稍后将详细说明</p>
-<h3 id="4-4注解总结"><a href="#4-4注解总结" class="headerlink" title="4.4注解总结"></a>4.4注解总结</h3><h4 id="4-4-1用于创建对象的"><a href="#4-4-1用于创建对象的" class="headerlink" title="4.4.1用于创建对象的"></a>4.4.1用于创建对象的</h4><p>他们的作用就和在XML配置文件中编写一个<bean>标签实现的功能是一样的</p>
+<h3 id="4-4注解总结"><a href="#4-4注解总结" class="headerlink" title="4.4注解总结"></a>4.4注解总结</h3><h4 id="4-4-1用于创建对象的"><a href="#4-4-1用于创建对象的" class="headerlink" title="4.4.1用于创建对象的"></a>4.4.1用于创建对象的</h4><p>他们的作用就和在XML配置文件中编写一个<bean>标签实现的功能是一样的</bean></p>
 <ul>
 <li><p><strong>Component</strong> :</p>
 <p>​          作用：用于把当前类对象存入spring容器中</p>
@@ -823,7 +836,7 @@
 </ul>
 <p>​              以上三个注解他们的作用和属性与Component是一模一样。</p>
 <p><strong>细节</strong>：如果注解中<strong>有且只有一个</strong>属性要赋值时，且名称是value，<strong>value在赋值是可以不写</strong>。<br>         他们三个是spring框架为我们提供明确的三层使用的注解，使我们的三层对象更加清晰</p>
-<h4 id="4-4-2用于注入数据的"><a href="#4-4-2用于注入数据的" class="headerlink" title="4.4.2用于注入数据的"></a><strong>4.4.2用于注入数据的</strong></h4><p>他们的作用就和在xml配置文件中的bean标签中写一个<property>标签的作用是一样的<br>            相当于：</p>
+<h4 id="4-4-2用于注入数据的"><a href="#4-4-2用于注入数据的" class="headerlink" title="4.4.2用于注入数据的"></a><strong>4.4.2用于注入数据的</strong></h4><p>他们的作用就和在xml配置文件中的bean标签中写一个<property>标签的作用是一样的<br>            相当于：</property></p>
 <pre class=" language-xml"><code class="language-xml">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
 <ul>
@@ -1810,7 +1823,25 @@
 </code></pre>
 <p><strong>它并没有给我们开发带来便利，反而增加了重复代码，所以不推荐使用</strong></p>
 <h2 id="7-总结"><a href="#7-总结" class="headerlink" title="7.总结"></a>7.总结</h2><p>在实际开发中，注解带来的便利很大，但是有些情况下，纯注解配置也会显得繁琐，所以需要配合使用。</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1835,7 +1866,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://black210.github.io/2020/03/04/spring-zong-jie/">https://black210.github.io/2020/03/04/spring-zong-jie/</a>
+                    <a href="https://black210.github.io/2020/03/05/spring-zong-jie/">https://black210.github.io/2020/03/05/spring-zong-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1872,7 +1903,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Spring/">
+                                    <span class="chip bg-color">Spring</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -2036,50 +2071,11 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
-            <div class="card">
-                <a href="/2020/03/04/spring-zong-jie/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Spring总结">
-                        
-                        <span class="card-title">Spring总结</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Spring总结前言引用链接:https://github.com/Snailclimb/JavaGuide/blob/master/docs/system-design/framework/spring/SpringInterviewQu
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-04
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Black
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-            </div>
-        </div>
-        
-        
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/03/spring-ioc-yuan-ma-fen-xi/">
+                <a href="/2020/03/05/spring-ioc-yuan-ma-fen-xi/">
                     <div class="card-image">
                         
                         
@@ -2094,6 +2090,71 @@
                             Spring IOC源码分析1.前言目的：记录IOC源码挖掘过程
 参考链接：https://www.javadoop.com/post/spring-ioc
 要说的 IOC 总体来说有两处地方最重要，一个是创建 Bean 容器，一个是初始化
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-05
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/03/03/ji-chu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="基础">
+                        
+                        <span class="card-title">基础</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            基础网络网络五层结构
+应用层：软件获取相关服务
+
+传输层：主机间通信
+
+TCP:面向连接与字节，稳定，速度较慢占资源，
+
+三次握手
+
+客户端向服务器发送SYN
+服务器向客户端发送SYN/ACK
+客户端向服务器发送SYN
+
+
+四次挥手 
+
+客
                         
                     </div>
                     <div class="publish-info">
