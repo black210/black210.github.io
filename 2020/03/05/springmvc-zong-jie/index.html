@@ -458,7 +458,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-07
+                    2020-03-12
                 </div>
                 
 
@@ -579,10 +579,11 @@
 <li><p>headers：用于指定限制请求消息头的条件。</p>
 </li>
 </ul>
+<blockquote>
+<p>注意：以上四个属性只要出现 2 个或以上时，他们的关系是与的关系。</p>
+</blockquote>
 </li>
 </ul>
-<p>注意：</p>
-<p>​        以上四个属性只要出现 2 个或以上时，他们的关系是与的关系。</p>
 <h3 id="3-2请求参数类"><a href="#3-2请求参数类" class="headerlink" title="3.2请求参数类"></a>3.2请求参数类</h3><h4 id="3-2-1请求参数"><a href="#3-2-1请求参数" class="headerlink" title="3.2.1请求参数"></a>3.2.1请求参数</h4><p><strong>1.绑定的机制</strong></p>
 <p>​        我们都知道，表单中请求参数都是基于 key=value 的。</p>
 <p>​        SpringMVC 绑定请求参数的过程是通过把表单提交请求参数，作为控制器中方法参数进行绑定的。</p>
@@ -631,7 +632,9 @@
 </li>
 </ul>
 <p>​        接收的请求参数是 json 格式数据。需要借助一个注解实现。</p>
+<blockquote>
 <p>SpringMVC 绑定请求参数是自动实现的，但是要想使用，必须遵循使用要求。</p>
+</blockquote>
 </li>
 <li><p><strong>使用 ServletAPI 对象作为方法参数</strong></p>
 <p>SpringMVC 还支持使用原始 ServletAPI 对象作为控制器方法的参数。支持原始 ServletAPI 对象有：</p>
@@ -700,7 +703,9 @@
 改为：
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Connector</span> <span class="token attr-name">connectionTimeout</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>20000<span class="token punctuation">"</span></span> <span class="token attr-name">port</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>8080<span class="token punctuation">"</span></span> <span class="token attr-name">protocol</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>HTTP/1.1<span class="token punctuation">"</span></span> <span class="token attr-name">redirectPort</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>8443<span class="token punctuation">"</span></span> <span class="token attr-name">useBodyEncodingForURI</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
 </code></pre>
+<blockquote>
 <p>如果遇到 ajax 请求仍然乱码，请把：<code>useBodyEncodingForURI="true"</code>改为 <code>URIEncoding="UTF-8"</code>即可。</p>
+</blockquote>
 <h4 id="3-2-3请求参数类注解"><a href="#3-2-3请求参数类注解" class="headerlink" title="3.2.3请求参数类注解"></a>3.2.3请求参数类注解</h4><h5 id="RequestParam"><a href="#RequestParam" class="headerlink" title="RequestParam"></a><strong>RequestParam</strong></h5><ul>
 <li><p>作用：</p>
 <p><strong>把请求中指定名称的参数给控制器中的形参赋值。</strong></p>
@@ -817,9 +822,9 @@
 <p>value：用于获取数据的 key。key 可以是 POJO 的属性名称，也可以是 map 结构的 key。</p>
 </li>
 <li><p><strong>应用场景：</strong></p>
-<p>当表单提交数据不是完整的实体类数据时，保证没有提交数据的字段使用数据库对象原来的数据。</p>
+<p>​    当表单提交数据不是完整的实体类数据时，保证没有提交数据的字段使用数据库对象原来的数据。</p>
 <p>例如：</p>
-<p>我们在编辑一个用户时，用户有一个创建信息字段，该字段的值是不允许被修改的。在提交表单数</p>
+<p>​     我们在编辑一个用户时，用户有一个创建信息字段，该字段的值是不允许被修改的。在提交表单数</p>
 <p>据是肯定没有此字段的内容，一旦更新会把该字段内容置为 null，此时就可以使用此注解解决问题。</p>
 </li>
 <li><p>基于 Map 的应用场景示例：</p>
@@ -1012,7 +1017,9 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">mvc:</span>resources</span> <span class="token attr-name">location</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/css/<span class="token punctuation">"</span></span> <span class="token attr-name">mapping</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/css/**<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">mvc:</span>resources</span> <span class="token attr-name">location</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/images/<span class="token punctuation">"</span></span> <span class="token attr-name">mapping</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/images/**<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">mvc:</span>resources</span> <span class="token attr-name">location</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/scripts/<span class="token punctuation">"</span></span> <span class="token attr-name">mapping</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/javascript/**<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></code></pre>
+<blockquote>
 <p>​    jsp页面</p>
+</blockquote>
 <pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
         <span class="token comment" spellcheck="true">// 页面加载，绑定单击事件</span>
         <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -1038,7 +1045,9 @@
             <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<blockquote>
 <p>​    控制类</p>
+</blockquote>
 <pre class=" language-java"><code class="language-java">    <span class="token comment" spellcheck="true">/**
      * 模拟异步请求响应
      */</span>
@@ -1054,7 +1063,9 @@
         <span class="token keyword">return</span> user<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 </code></pre>
+<blockquote>
 <p>分析：</p>
+</blockquote>
 <ul>
 <li><p>使用@RequestBody获取请求体数据，并把json的字符串转换成JavaBean的对象</p>
 </li>
@@ -1233,7 +1244,9 @@
 </li>
 </ul>
 <h3 id="5-4自定义拦截器"><a href="#5-4自定义拦截器" class="headerlink" title="5.4自定义拦截器"></a>5.4自定义拦截器</h3><p><img src="https://raw.githubusercontent.com/black210/images/master/demo/202003/07/102925-55001.png" alt="SpringMVC自定义拦截器"></p>
-<h4 id="5-4-1编写拦截器类"><a href="#5-4-1编写拦截器类" class="headerlink" title="5.4.1编写拦截器类"></a>5.4.1编写拦截器类</h4><p>​    <strong>拦截器1</strong></p>
+<h4 id="5-4-1编写拦截器类"><a href="#5-4-1编写拦截器类" class="headerlink" title="5.4.1编写拦截器类"></a>5.4.1编写拦截器类</h4><blockquote>
+<p>​    <strong>拦截器1</strong></p>
+</blockquote>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 自定义拦截器
  */</span>
@@ -1281,7 +1294,9 @@
     <span class="token punctuation">}</span>
 
 <span class="token punctuation">}</span></code></pre>
+<blockquote>
 <p>​    <strong>拦截器2</strong></p>
+</blockquote>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 自定义拦截器
  */</span>
@@ -1387,7 +1402,9 @@
 <h3 id="5-5多个拦截器执行顺序"><a href="#5-5多个拦截器执行顺序" class="headerlink" title="5.5多个拦截器执行顺序"></a>5.5多个拦截器执行顺序</h3><p>​    参考链接：<a href="https://blog.csdn.net/syslbjjly/article/details/90675223" target="_blank" rel="noopener">https://blog.csdn.net/syslbjjly/article/details/90675223</a></p>
 <p>在此可以知道拦截器的执行流程和<strong>springboot注册的顺序有关</strong>，以下是拦截器的正常流程的执行顺序</p>
 <p><img src="https://raw.githubusercontent.com/black210/images/master/demo/202003/07/092827-614925.png" alt="多个拦截器的执行示意"></p>
+<blockquote>
 <p><strong>总结</strong>：</p>
+</blockquote>
 <ul>
 <li><p>拦截器1放行，拦截器2 preHandle才会执行。</p>
 </li>
@@ -1709,19 +1726,21 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/05/spring-zong-jie/">
+                <a href="/2020/03/05/spring-ioc-yuan-ma-fen-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Spring 总结">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Spring IOC源码分析">
                         
-                        <span class="card-title">Spring 总结</span>
+                        <span class="card-title">Spring IOC源码分析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Spring总结前言引用链接:https://github.com/Snailclimb/JavaGuide/blob/master/docs/system-design/framework/spring/SpringInterviewQu
+                            Spring IOC源码分析1.前言目的：记录IOC源码挖掘过程
+参考链接：https://www.javadoop.com/post/spring-ioc
+要说的 IOC 总体来说有两处地方最重要，一个是创建 Bean 容器，一个是初始化
                         
                     </div>
                     <div class="publish-info">
@@ -1758,48 +1777,44 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/03/ji-chu/">
+                <a href="/2020/03/05/spring-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="基础">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Spring 总结">
                         
-                        <span class="card-title">基础</span>
+                        <span class="card-title">Spring 总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            基础网络网络五层结构
-应用层：软件获取相关服务
-
-传输层：主机间通信
-
-TCP:面向连接与字节，稳定，速度较慢占资源，
-
-三次握手
-
-客户端向服务器发送SYN
-服务器向客户端发送SYN/ACK
-客户端向服务器发送SYN
-
-
-四次挥手 
-
-客
+                            Spring总结前言引用链接:https://github.com/Snailclimb/JavaGuide/blob/master/docs/system-design/framework/spring/SpringInterviewQu
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-05
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Black
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
+                    </a>
+                    
                 </div>
                 
             </div>

@@ -1,0 +1,2786 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Web（一）, Hexo">
+    <meta name="description" content="Web（一）前言​    目的：简要的复习web前端知识
+​    主参考链接：https://www.w3school.com.cn/
+[TOC]
+1.Web概述1.1软件架构
+C/S: Client/Server  客户端/服务器端
+
+">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Web（一） | Hexo</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.gif" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.gif" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Web（一）</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Web/">
+                                <span class="chip bg-color">Web</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                学习笔记
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-03-09
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-03-12
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    8.2k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    32 分
+                </div>
+                
+				
+                
+            </div>
+            
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Web（一）"><a href="#Web（一）" class="headerlink" title="Web（一）"></a>Web（一）</h1><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>​    目的：简要的复习web前端知识</p>
+<p>​    主参考链接：<a href="https://www.w3school.com.cn/" target="_blank" rel="noopener">https://www.w3school.com.cn/</a></p>
+<p>[TOC]</p>
+<h2 id="1-Web概述"><a href="#1-Web概述" class="headerlink" title="1.Web概述"></a>1.Web概述</h2><h3 id="1-1软件架构"><a href="#1-1软件架构" class="headerlink" title="1.1软件架构"></a>1.1软件架构</h3><ol>
+<li><p>C/S: Client/Server  <strong>客户端/服务器端</strong></p>
+<ul>
+<li><p>在用户本地有一个客户端程序，在远程有一个服务器端程序</p>
+<p>如：QQ，迅雷…</p>
+<ul>
+<li><p>优点：</p>
+<p>​    用户体验好</p>
+</li>
+<li><p>缺点：</p>
+<p>​    开发、安装，部署，维护 麻烦</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>B/S: Browser/Server <strong>浏览器/服务器端</strong></p>
+<ul>
+<li>只需要一个浏览器，用户通过不同的网址(URL)，客户访问不同的服务器端程序<ul>
+<li>优点：开发、安装，部署，维护 简单</li>
+<li>缺点：<ol>
+<li>如果应用过大，用户的体验可能会受到影响</li>
+<li>对硬件要求过高<h3 id="1-2B-S架构详解"><a href="#1-2B-S架构详解" class="headerlink" title="1.2B/S架构详解"></a>1.2B/S架构详解</h3></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>资源分类：    </p>
+<ul>
+<li><p>静态资源：使用静态网页开发技术发布的资源。</p>
+<ul>
+<li>特点：<ul>
+<li>所有用户访问，得到的结果是一样的。</li>
+<li>如：文本，图片，音频、视频, <strong>HTML,CSS,JavaScript…</strong></li>
+</ul>
+<ul>
+<li>如果用户请求的是静态资源，那么服务器会直接将静态资源发送给浏览器。浏览器中内置了静态资源的解析引擎，可以展示静态资源</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>动态资源：使用动态网页及时发布的资源。</p>
+<p>特点：</p>
+<ul>
+<li>所有用户访问，得到的结果可能不一样。</li>
+<li>如：<strong>jsp/servlet,php,asp…</strong></li>
+<li>如果用户请求的是动态资源，那么服务器会执行动态资源，转换为静态资源，再发送给浏览器</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-HTML基础"><a href="#2-HTML基础" class="headerlink" title="2.HTML基础"></a>2.HTML基础</h2><h3 id="2-1概述"><a href="#2-1概述" class="headerlink" title="2.1概述"></a>2.1概述</h3><ul>
+<li><p>概念：是最基础的网页开发语言    </p>
+<p>Hyper Text Markup Language <strong>超文本标记语言</strong></p>
+</li>
+<li><p>超文本:</p>
+<p>​    超文本是用超链接的方法，将各种不同空间的文字信息组织在一起的网状文本.</p>
+<ul>
+<li><p>标记语言:</p>
+<p>​    由标签构成的语言。&lt;标签名称&gt; 如 html，xml</p>
+<p> ​    <strong>标记语言不是编程语言</strong>。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2快速入门"><a href="#2-2快速入门" class="headerlink" title="2.2快速入门"></a>2.2快速入门</h3><p><strong>语法</strong>：</p>
+<ol>
+<li><p><strong>html文档后缀名</strong> .html 或者 .htm</p>
+<ol start="2">
+<li><p><strong>标签分为</strong></p>
+<ul>
+<li><strong>围堵标签</strong>：有开始标签和结束标签。如 <code>&lt;html&gt; &lt;/html&gt;</code></li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li><strong>自闭和标签</strong>：开始标签和结束标签在一起。如 <code>&lt;br/&gt;</code></li>
+</ul>
+<ol start="3">
+<li><p>标签可以嵌套：</p>
+<p>需要正确嵌套，<strong>不能你中有我，我中有你</strong></p>
+<ul>
+<li>错误：<code>&lt;a&gt;&lt;b&gt;&lt;/a&gt;&lt;/b&gt;</code></li>
+<li>正确：<code>&lt;a&gt;&lt;b&gt;&lt;/b&gt;&lt;/a&gt;</code></li>
+</ul>
+</li>
+<li><p>在开始标签中可以定义属性。属性是由<strong>键值对</strong>构成，值需要用<strong>引号(单双都可)</strong>引起来</p>
+<ol start="4">
+<li>html的标签不区分大小写，但是<strong>建议使用小写</strong>。</li>
+</ol>
+</li>
+</ol>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>FONT</span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>red<span class="token punctuation">'</span></span><span class="token punctuation">></span></span>Hello World<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>font</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span>
+
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>font</span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>green<span class="token punctuation">'</span></span><span class="token punctuation">></span></span>Hello World<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>font</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>    </code></pre>
+<h3 id="2-3标签学习（部分）"><a href="#2-3标签学习（部分）" class="headerlink" title="2.3标签学习（部分）"></a>2.3标签学习（部分）</h3><h4 id="2-3-1文件标签："><a href="#2-3-1文件标签：" class="headerlink" title="2.3.1文件标签："></a>2.3.1<strong>文件标签</strong>：</h4><p>构成html最基本的标签</p>
+<ul>
+<li><code>&lt;html&gt;</code>  : html文档的根标签</li>
+<li><code>&lt;head&gt;</code>：头标签。用于指定html文档的一些属性。引入外部的资源</li>
+<li><code>&lt;title&gt;</code>：标题标签。</li>
+<li><code>&lt;body&gt;</code>：体标签</li>
+<li><code>&lt;!DOCTYPE html&gt;</code>：html5中定义该文档是html文档。</li>
+</ul>
+<h4 id="2-3-2文本标签："><a href="#2-3-2文本标签：" class="headerlink" title="2.3.2文本标签："></a>2.3.2<strong>文本标签</strong>：</h4><ul>
+<li>注释：<code>&lt;!-- 注释内容 --&gt;</code></li>
+<li><code>&lt;h1&gt; to &lt;h6&gt;</code>：标题标签。 h1~h6:字体大小逐渐递减</li>
+</ul>
+<ul>
+<li><p><code>&lt;p&gt;</code>：段落标签</p>
+</li>
+<li><p><code>&lt;br&gt;</code>：换行标签</p>
+</li>
+<li><p><code>&lt;hr&gt;</code>：展示一条水平线</p>
+<ul>
+<li><p>属性：</p>
+<ul>
+<li><p>color：颜色</p>
+</li>
+<li><p>width：宽度</p>
+</li>
+<li><p>size：高度</p>
+</li>
+<li><p>align：对其方式</p>
+<p>center：居中；left：左对齐；right：右对齐</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>&lt;b&gt;</code>：字体加粗</p>
+</li>
+<li><p><code>&lt;i&gt;</code>：字体斜体</p>
+</li>
+<li><p><code>&lt;font&gt;</code>:字体标签</p>
+</li>
+<li><p><code>&lt;center&gt;</code>:文本居中</p>
+<ul>
+<li>属性：<br>color：颜色；size：大小； face：字体</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>属性定义</strong>：</p>
+</blockquote>
+<ul>
+<li>color：<pre><code>      1. 英文单词：red , green , blue</code></pre><ol start="2">
+<li>rgb(值1，值2，值3)：值的范围：0~255  如  <code>rgb(0,0,255)</code></li>
+<li>#值1值2值3：值的范围：00~FF之间。如： <code>#FF00FF</code></li>
+</ol>
+</li>
+<li>width：<ol>
+<li>数值：width=’20’ ,数值的单位，默认是 px(像素)</li>
+<li>数值%：占比相对于父元素的比例</li>
+</ol>
+</li>
+</ul>
+<h4 id="2-3-3图片标签："><a href="#2-3-3图片标签：" class="headerlink" title="2.3.3图片标签："></a>2.3.3<strong>图片标签</strong>：</h4><ul>
+<li><p><code>&lt;img&gt;</code>：展示图片</p>
+<ul>
+<li><p>属性：</p>
+<p> src：指定图片的位置</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>image/jingxuan_2.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>right<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>古镇<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>500<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>500<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+ <span class="token comment" spellcheck="true">&lt;!--相对路径
+        * 以.开头的路径
+            * ./：代表当前目录  ./image/1.jpg
+            * ../:代表上一级目录
+             --></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>./image/jiangwai_1.jpg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>../image/jiangwai_1.jpg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
+<h4 id="2-3-4列表标签："><a href="#2-3-4列表标签：" class="headerlink" title="2.3.4列表标签："></a>2.3.4<strong>列表标签</strong>：</h4><ul>
+<li><p>无序列表：</p>
+<pre class=" language-html"><code class="language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>Coffee<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>Milk<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span></code></pre>
+</li>
+<li><p>有序列表：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>Coffee<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>Milk<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">></span></span></code></pre>
+</li>
+</ul>
+<h4 id="2-3-5链接标签："><a href="#2-3-5链接标签：" class="headerlink" title="2.3.5链接标签："></a>2.3.5<strong>链接标签</strong>：</h4><ul>
+<li><p><code>&lt;a&gt;</code>:定义一个超链接</p>
+<ul>
+<li><p>属性：</p>
+<ol>
+<li>href：指定访问资源的URL(统一资源定位符)</li>
+<li>target：指定打开资源的方式</li>
+</ol>
+<ul>
+<li><p>_self:默认值，在当前页面打开</p>
+</li>
+<li><p>_blank：在空白页面打开</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.itcast.cn<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>点我<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span></code></pre>
+</li>
+</ul>
+<h4 id="2-3-6-div和span："><a href="#2-3-6-div和span：" class="headerlink" title="2.3.6 div和span："></a>2.3.6 <strong>div和span</strong>：</h4><ul>
+<li><code>&lt;div&gt;</code>:每一个div占满一整行。块级标签(自动换行)</li>
+<li><code>&lt;span&gt;</code>：文本信息在一行展示。行内标签 内联标签（不会换行）</li>
+</ul>
+<h4 id="2-3-7语义化标签："><a href="#2-3-7语义化标签：" class="headerlink" title="2.3.7语义化标签："></a>2.3.7<strong>语义化标签</strong>：</h4><p>html5中为了提高程序的可读性，提供了一些标签。</p>
+<ul>
+<li><p><code>&lt;header&gt;</code>：页眉</p>
+</li>
+<li><p><code>&lt;footer&gt;</code>：页脚</p>
+</li>
+</ul>
+<h4 id="2-3-8表格标签："><a href="#2-3-8表格标签：" class="headerlink" title="2.3.8表格标签："></a>2.3.8<strong>表格标签</strong>：</h4><ul>
+<li><code>&lt;table&gt;</code>：定义表格<pre><code>  * width：宽度</code></pre><ul>
+<li>border：边框</li>
+<li>cellpadding：定义内容和单元格的距离</li>
+<li>cellspacing：定义单元格之间的距离。如果指定为0，则单元格的线会合为一条、</li>
+<li>bgcolor：背景色</li>
+<li>align：对齐方式</li>
+</ul>
+</li>
+<li><code>&lt;tr&gt;</code>：定义行<ul>
+<li>bgcolor：背景色</li>
+<li>align：对齐方式</li>
+</ul>
+</li>
+<li><code>&lt;td&gt;</code>：定义单元格<ul>
+<li>colspan：合并列</li>
+<li>rowspan：合并行</li>
+</ul>
+</li>
+<li><code>&lt;th&gt;</code>：定义表头单元格</li>
+<li><code>&lt;caption&gt;</code>：表格标题</li>
+<li><code>&lt;thead&gt;</code>：表示表格的头部分</li>
+<li><code>&lt;tbody&gt;</code>：表示表格的体部分</li>
+<li><code>&lt;tfoot&gt;</code>：表示表格的脚部分</li>
+</ul>
+<h3 id="2-4表单标签"><a href="#2-4表单标签" class="headerlink" title="2.4表单标签"></a>2.4表单标签</h3><h4 id="2-4-1表单："><a href="#2-4-1表单：" class="headerlink" title="2.4.1表单："></a>2.4.1表单：</h4><ul>
+<li>概念：用于采集用户输入的数据的。用于和服务器进行交互。<ul>
+<li><code>&lt;form&gt;</code>：用于定义表单的。可以定义一个范围，范围代表采集用户数据的范围</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>属性：</p>
+</blockquote>
+<ul>
+<li>action：指定提交数据的URL</li>
+<li>method:指定提交方式</li>
+</ul>
+<blockquote>
+<p>分类：一共7种，2种比较常用。</p>
+</blockquote>
+<ul>
+<li>get：<ol>
+<li><strong>请求参数会在地址栏中显示</strong>。会封装到请求行中。</li>
+<li>请求参数大小是有限制的。</li>
+<li>不太安全。</li>
+</ol>
+</li>
+<li>post：<ol start="2">
+<li><strong>请求参数不会再地址栏中显示</strong>。会封装在请求体中。</li>
+<li>请求参数的大小没有限制。</li>
+<li>较为安全。</li>
+</ol>
+</li>
+<li>其它：HEAD、 PUT、DELETE、OPTIONS、TRACE</li>
+</ul>
+<blockquote>
+<p>表单项中的数据要想被提交：<strong>必须指定其name属性</strong></p>
+</blockquote>
+<h4 id="2-4-2表单项标签："><a href="#2-4-2表单项标签：" class="headerlink" title="2.4.2表单项标签："></a>2.4.2表单项标签：</h4><ul>
+<li><code>&lt;input&gt;</code>：可以通过type属性值，改变元素展示的样式</li>
+</ul>
+<blockquote>
+<p><strong>type属性</strong>：</p>
+</blockquote>
+<ul>
+<li><p><strong>text</strong>：文本输入框，默认值</p>
+<p>​    *placeholder：指定输入框的提示信息，当输入框的内容发生变化，会自动清空提示信息    </p>
+</li>
+<li><p><strong>password</strong>：密码输入框</p>
+</li>
+<li><p><strong>radio</strong>:单选框</p>
+</li>
+</ul>
+<blockquote>
+<p>注意：</p>
+</blockquote>
+<ol>
+<li><p>要想让多个单选框实现单选的效果，则多个单选框的<strong>name属性值必须一样</strong>。</p>
+</li>
+<li><p>一般会给每一个单选框提供value属性，指定其被选中后提交的值</p>
+</li>
+<li><p>checked属性，可以指定默认值。如下，默认为male</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>radio<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>sex<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>male<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>Male
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>radio<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>sex<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>female<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Female
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span> </code></pre>
+</li>
+</ol>
+<ul>
+<li><strong>checkbox</strong>：复选框</li>
+</ul>
+<blockquote>
+<p>注意：</p>
+</blockquote>
+<ol>
+<li>一般会<strong>给每一个单选框提供value属性</strong>，指定其被选中后提交的值</li>
+<li><strong>checked属性</strong>，可以指定默认值</li>
+</ol>
+<ul>
+<li><p><strong>file</strong>：文件选择框</p>
+</li>
+<li><p><strong>hidden</strong>：隐藏域，用于提交一些信息。</p>
+</li>
+<li><p><strong>label</strong>：指定输入项的文字描述信息</p>
+</li>
+</ul>
+<blockquote>
+<p>注意：label的for属性一般会和 input 的 id属性值 对应。如果对应了，则点击label区域，会让input输入框获取焦点。</p>
+</blockquote>
+<ul>
+<li><p><strong>按钮类</strong>：</p>
+<ol>
+<li><strong>submit</strong>：提交按钮。可以提交表单</li>
+<li><strong>button</strong>：普通按钮</li>
+<li><strong>image</strong>：图片提交按钮</li>
+</ol>
+</li>
+<li><p><code>&lt;select&gt;</code>: 下拉列表</p>
+<p>​    子元素：option，指定列表项</p>
+</li>
+<li><p><code>&lt;textarea&gt;</code>：文本域</p>
+<ul>
+<li><p>cols：指定列数，每一行有多少个字符</p>
+</li>
+<li><p>rows：默认多少行。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-CSS基础"><a href="#3-CSS基础" class="headerlink" title="3.CSS基础"></a>3.CSS基础</h2><h3 id="3-1概述"><a href="#3-1概述" class="headerlink" title="3.1概述"></a>3.1概述</h3><ul>
+<li>概念： Cascading Style Sheets 层叠样式表</li>
+</ul>
+<ul>
+<li>层叠：多个样式可以作用在同一个html的元素上，同时生效</li>
+<li>好处：<ol>
+<li>功能强大</li>
+<li>将内容展示和样式控制分离<ul>
+<li>降低耦合度。解耦</li>
+<li>让分工协作更容易</li>
+<li>提高开发效率</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="3-2CSS的使用"><a href="#3-2CSS的使用" class="headerlink" title="3.2CSS的使用"></a>3.2CSS的使用</h3><h4 id="3-2-1CSS与html结合方式"><a href="#3-2-1CSS与html结合方式" class="headerlink" title="3.2.1CSS与html结合方式"></a>3.2.1CSS与html结合方式</h4><ol>
+<li><p><strong>内联样式</strong></p>
+<ul>
+<li><p>在标签内使用style属性指定css代码</p>
+</li>
+<li><p>如：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>hello css<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>内部样式</strong></p>
+<ul>
+<li><p>在<strong>head标签内</strong>，定义style标签，style标签的标签体内容就是css代码</p>
+</li>
+<li><p>如：</p>
+<pre class=" language-html"><code class="language-html">        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
+                <span class="token selector">div</span><span class="token punctuation">{</span>
+                    <span class="token property">color</span><span class="token punctuation">:</span>blue<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>    
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>hello css<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>外部样式</strong></p>
+<ol>
+<li><p>定义css资源文件。</p>
+</li>
+<li><p>在head标签内，定义link标签，引入外部的资源文件</p>
+<ul>
+<li><p>如：    </p>
+<pre class=" language-css"><code class="language-css"> <span class="token selector">a<span class="token class">.css</span>文件：                
+                div</span><span class="token punctuation">{</span>
+                    <span class="token property">color</span><span class="token punctuation">:</span>green<span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span></code></pre>
+<pre class=" language-html"><code class="language-html">            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>css/a.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>hello css<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>hello css<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p><strong>注意</strong>：</p>
+</blockquote>
+<ul>
+<li><p>1,2,3种方式 css作用范围越来越大</p>
+</li>
+<li><p>1方式不常用，后期常用2,3</p>
+</li>
+<li><p>3的格式可以写为：</p>
+<pre class=" language-html"><code class="language-html">            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
+                <span class="token atrule"><span class="token rule">@import</span> <span class="token string">"css/a.css"</span><span class="token punctuation">;</span></span>
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>3.2.2 css语法</code></pre>
+</li>
+</ul>
+<h4 id="3-2-2-css语法"><a href="#3-2-2-css语法" class="headerlink" title="3.2.2 css语法"></a>3.2.2 css语法</h4><ul>
+<li><p><strong>格式：</strong>    </p>
+<pre><code>   选择器 {
+            属性名1:属性值1;
+          属性名2:属性值2;
+                ...
+                    }    </code></pre><pre><code>    - **选择器 : 筛选具有相似特征的元素**
+
+  -  注意： 每一对属性需要使用`；`隔开，最后一对属性可以不加。</code></pre></li>
+<li><p><strong>记得写引号</strong></p>
+<p><strong>提示：</strong>如果值为若干单词，则要给值加引号<code>：</code></p>
+<ul>
+<li><code>p {font-family: "sans serif";}</code></li>
+</ul>
+</li>
+<li><p><strong>值的不同写法和单位</strong></p>
+<ol>
+<li>除了英文单词 red，我们还可以使用十六进制的颜色值 #ff0000：<code>p { color: #ff0000; }</code></li>
+<li>为了节约字节，我们可以使用 CSS 的缩写形式：<code>p { color: #f00; }</code></li>
+<li>我们还可以通过两种方法使用 RGB 值：<ul>
+<li><code>p { color: rgb(255,0,0); }</code></li>
+<li><code>p { color: rgb(100%,0%,0%); }</code></li>
+</ul>
+</li>
+</ol>
+<p>请注意，当使用 RGB 百分比时，即使当值为 0 时也要写百分比符号。但是在其他的情况下就不需要这么做了。比如说，当尺寸为 0 像素时，0 之后不需要使用 px 单位，因为 0 就是 0，无论单位是什么。</p>
+</li>
+<li><p><strong>空格和大小写</strong></p>
+<p>大多数样式表包含不止一条规则，而大多数规则包含不止一个声明。多重声明和空格的使用使得样式表更容易被编辑：</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">body </span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#000</span><span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token hexcode">#fff</span><span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token property">font-family</span><span class="token punctuation">:</span> Georgia, Palatino, serif<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span></code></pre>
+</li>
+</ul>
+<h4 id="3-2-3选择器"><a href="#3-2-3选择器" class="headerlink" title="3.2.3选择器"></a>3.2.3选择器</h4><blockquote>
+<p><strong>基础选择器</strong>（优先级1&gt;3&gt;2）</p>
+</blockquote>
+<ul>
+<li><p>id选择器：选择具体的id属性值的元素。建议在一个html页面中<strong>id值唯一</strong></p>
+<ul>
+<li>语法：#id属性值{}  </li>
+<li><code>#red {color:red;}</code></li>
+</ul>
+</li>
+<li><p>元素选择器：选择具有相同<strong>标签名称</strong>的元素</p>
+<ul>
+<li><p>语法： 标签名称{}</p>
+</li>
+<li><p>注意：id选择器优先级高于元素选择器</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">html </span><span class="token punctuation">{</span><span class="token property">color</span><span class="token punctuation">:</span>black<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>
+</li>
+</ul>
+</li>
+<li><p>类选择器：选择具有相同的<strong>class属性值</strong>的元素。</p>
+<ul>
+<li><p>语法：.class属性值{}</p>
+</li>
+<li><p>注意：类选择器选择器优先级高于元素选择器</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.fancy</span> td </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#f60</span><span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token hexcode">#666</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>扩展选择器：</strong></p>
+</blockquote>
+<ul>
+<li><p><strong>选择所有元素</strong></p>
+<ul>
+<li>语法： <code>*{}</code></li>
+</ul>
+</li>
+<li><p><strong>并集选择器</strong>：选择两个</p>
+<ul>
+<li><p>选择器1,选择器2{}</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">h2, p </span><span class="token punctuation">{</span><span class="token property">color</span><span class="token punctuation">:</span>gray<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>ID选择器</strong>：在某些方面，ID 选择器类似于类选择器</p>
+<ul>
+<li><p>语法：首先，ID 选择器前面有一个 <code>#</code> 号； 也称为棋盘号或井号。</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>intro<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>This is a paragraph of introduction.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span></code></pre>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token id">#intro</span> </span><span class="token punctuation">{</span><span class="token property">font-weight</span><span class="token punctuation">:</span>bold<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>后代选择器(包含选择器)</strong>：选择器1元素下的选择器2元素</p>
+<ul>
+<li><p>语法：  选择器1 选择器2{}</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">h1 em </span><span class="token punctuation">{</span><span class="token property">color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>This is a <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">></span></span>important<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">></span></span> heading<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>This is a <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">></span></span>important<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">></span></span> paragraph.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span></code></pre>
+</li>
+<li><p>注意：两个元素之间的层次间隔可以是<strong>无限的</strong>，可选择任意后代</p>
+</li>
+</ul>
+</li>
+<li><p><strong>子元素选择器</strong>：只选择某个元素的子元素</p>
+<ul>
+<li><p>语法：  选择器1 &gt; 选择器2{}</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">h1 > strong </span><span class="token punctuation">{</span><span class="token property">color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>This is <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span>very<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span>very<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span> important.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>This is <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">></span></span>really <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span>very<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">></span></span> important.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span></code></pre>
+</li>
+<li><p>拓展：结合后代选择器和子选择器</p>
+<pre class=" language-css"><code class="language-css">table<span class="token number">.</span>company td > p</code></pre>
+<p>上面的选择器会选择作为 td 元素子元素的所有 p 元素，这个 td 元素本身从 table 元素继承，该table元素有一个包含 company 的 class 属性。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>属性选择器</strong>：选择元素名称，属性名=属性值的元素</p>
+<ul>
+<li><p>语法：  元素名称[属性名]{}</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">&lt;!对有 href 属性的锚（a 元素）应用样式>
+    a<span class="token attribute">[href]</span> </span><span class="token punctuation">{</span><span class="token property">color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token selector">&lt;!将同时有 href 和 title 属性的 HTML 超链接的文本设置为红色>
+    a<span class="token attribute">[href]</span><span class="token attribute">[title]</span> </span><span class="token punctuation">{</span><span class="token property">color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>相邻兄弟选择器：</strong>选择紧接在另一元素后的元素（二者必须有相同父元素）。</p>
+<ul>
+<li><p>语法： 元素1 + 元素2 {}</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>List item 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>List item 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>List item 3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>List item 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>List item 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>List item 3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<pre class=" language-css"><code class="language-css"><span class="token selector">li + li </span><span class="token punctuation">{</span><span class="token property">font-weight</span><span class="token punctuation">:</span>bold<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>
+<p><img src="https://raw.githubusercontent.com/black210/images/master/demo/202003/10/112509-417061.png" alt="相邻兄弟选择器"></p>
+<ul>
+<li>上面这个选择器只会把<strong>列表中的第二个和第三个列表项变为粗体</strong>。第一个列表项不受影响。</li>
+<li>这两个列表是相邻兄弟，列表项本身也是相邻兄弟。不过，第一个列表中的列表项与第二个列表中的列表项不是相邻兄弟，因为这两组列表项不属于同一父元素（最多只能算堂兄弟）。</li>
+<li>请记住，用一个结合符只能选择两个相邻兄弟中的第二个元素。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>伪类选择器</strong>：选择一些元素具有的状态</p>
+<ul>
+<li><p>语法： 元素:状态{}</p>
+<p>如： <code>&lt;a&gt;</code></p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">a<span class="token pseudo-class">:link</span> </span><span class="token punctuation">{</span><span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#FF0000</span><span class="token punctuation">}</span>        <span class="token comment" spellcheck="true">/* 未访问的链接 */</span>
+<span class="token selector">a<span class="token pseudo-class">:visited</span> </span><span class="token punctuation">{</span><span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#00FF00</span><span class="token punctuation">}</span>    <span class="token comment" spellcheck="true">/* 已访问的链接 */</span>
+<span class="token selector">a<span class="token pseudo-class">:hover</span> </span><span class="token punctuation">{</span><span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#FF00FF</span><span class="token punctuation">}</span>    <span class="token comment" spellcheck="true">/* 鼠标移动到链接上 */</span>
+<span class="token selector">a<span class="token pseudo-class">:active</span> </span><span class="token punctuation">{</span><span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#0000FF</span><span class="token punctuation">}</span>    <span class="token comment" spellcheck="true">/* 选定的链接 */</span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>拓展</strong>：</p>
+</blockquote>
+<ul>
+<li><p><strong>first-child 伪类</strong>：选择元素的第一个子元素</p>
+<pre class=" language-css"><code class="language-css"> <span class="token selector">p<span class="token pseudo-class">:first-child</span> </span><span class="token punctuation">{</span><span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token selector">li<span class="token pseudo-class">:first-child</span> </span><span class="token punctuation">{</span><span class="token property">text-transform</span><span class="token punctuation">:</span>uppercase<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>These are the necessary steps:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>Intert Key<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>Turn key <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span>clockwise<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>Push accelerator<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Do <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">></span></span>not<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">></span></span> push the brake at the same time as the accelerator.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<ol>
+<li>第一个规则将作为某元素第一个子元素的所有 p 元素设置为粗体。</li>
+<li>第二个规则将作为某个元素（在 HTML 中，这肯定是 ol 或 ul 元素）第一个子元素的所有 li 元素变成大写。</li>
+</ol>
+</li>
+<li><p><strong><code>:lang</code> 伪类</strong>：使你有能力为不同的语言定义特殊的规则</p>
+<p>在下面的例子中，:lang 类为属性值为 no 的 q 元素定义引号的类型：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token style language-css">
+   <span class="token selector">q<span class="token pseudo-class">:lang(no)</span>
+      </span><span class="token punctuation">{</span>
+      <span class="token property">quotes</span><span class="token punctuation">:</span> <span class="token string">"~"</span> <span class="token string">"~"</span>
+      <span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>文字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>no<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>段落中的引用的文字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q</span><span class="token punctuation">></span></span>文字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+</li>
+<li><p><strong>伪元素</strong>：用于向某些选择器设置特殊效果</p>
+<p>参考链接：<a href="https://www.w3school.com.cn/css/css_pseudo_elements.asp" target="_blank" rel="noopener">https://www.w3school.com.cn/css/css_pseudo_elements.asp</a></p>
+<ol>
+<li><code>:first-line</code> ：用于向文本的首行设置特殊样式。</li>
+<li><code>:first-letter</code>：用于向文本的首字母设置特殊样式</li>
+<li><code>:before</code>：在元素的内容前面插入新内容。</li>
+<li><code>:after</code>：可以在元素的内容之后插入新内容。</li>
+</ol>
+</li>
+</ul>
+<h4 id="3-2-4属性"><a href="#3-2-4属性" class="headerlink" title="3.2.4属性"></a>3.2.4属性</h4><ol>
+<li><p><strong>字体、文本</strong></p>
+<pre><code> * font-size：字体大小</code></pre><ul>
+<li>color：文本颜色</li>
+<li>text-align：对其方式</li>
+<li>line-height：行高 </li>
+</ul>
+</li>
+<li><p><strong>背景</strong></p>
+<ul>
+<li>background：</li>
+</ul>
+</li>
+<li><p><strong>边框</strong></p>
+<ul>
+<li>border：设置边框，符合属性</li>
+</ul>
+</li>
+<li><p><strong>尺寸</strong></p>
+<ul>
+<li>width：宽度</li>
+<li>height：高度</li>
+</ul>
+</li>
+<li><p><strong>盒子模型：控制布局</strong></p>
+<ul>
+<li>margin：外边距</li>
+<li>padding：内边距<ul>
+<li>默认情况下内边距会影响整个盒子的大小</li>
+</ul>
+</li>
+<li>box-sizing: border-box;  设置盒子的属性，让width和height就是最终盒子的大小</li>
+<li>float：浮动</li>
+<li>left</li>
+<li>right<h2 id="4-JavaScript"><a href="#4-JavaScript" class="headerlink" title="4.JavaScript"></a>4.JavaScript</h2></li>
+</ul>
+</li>
+</ol>
+<h3 id="4-1概述"><a href="#4-1概述" class="headerlink" title="4.1概述"></a>4.1概述</h3><ul>
+<li>概念：    <strong>一门客户端脚本语言</strong><ul>
+<li>运行在客户端浏览器中的。每一个浏览器都有JavaScript的解析引擎<ul>
+<li>脚本语言：不需要编译，直接就可以被浏览器解析执行了</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>功能：可以来增强用户和html页面的交互过程，可以来控制html元素，让页面有一些<strong>动态的效果，</strong>增强用户的体验。</li>
+</ul>
+<ul>
+<li>​     <code>JavaScript</code> = <code>ECMAScript</code> + JavaScript自己特有的东西(BOM+DOM)</li>
+</ul>
+<h3 id="4-2ECMAScript基本语法"><a href="#4-2ECMAScript基本语法" class="headerlink" title="4.2ECMAScript基本语法"></a>4.2ECMAScript基本语法</h3><p>​    客户端脚本语言的标准。</p>
+<h4 id="4-2-1与html结合方式"><a href="#4-2-1与html结合方式" class="headerlink" title="4.2.1与html结合方式"></a>4.2.1与html结合方式</h4><ul>
+<li><p>内部 JS：</p>
+<ul>
+<li>定义<code>&lt;script&gt;</code>，标签体内容就是js代码</li>
+</ul>
+</li>
+<li><p>外部 JS：</p>
+<ul>
+<li>定义<code>&lt;script&gt;</code>，通过<strong>src属性引入</strong>外部的js文件 <blockquote>
+<p>注意：</p>
+</blockquote>
+</li>
+</ul>
+<ol>
+<li><code>&lt;script&gt;</code>可以定义在html页面的任何地方。但是<strong>定义的位置会影响执行顺序</strong>。</li>
+<li><code>&lt;script&gt;</code>可以定义多个。</li>
+</ol>
+</li>
+</ul>
+<h4 id="4-2-2注释"><a href="#4-2-2注释" class="headerlink" title="4.2.2注释"></a>4.2.2注释</h4><ul>
+<li><p>单行注释：<code>//</code>注释内容</p>
+</li>
+<li><p>多行注释：<code>/* 注释内容 */</code></p>
+</li>
+</ul>
+<h4 id="4-2-3数据类型"><a href="#4-2-3数据类型" class="headerlink" title="4.2.3数据类型"></a>4.2.3数据类型</h4><ul>
+<li><p>原始数据类型(基本数据类型)：</p>
+<ol>
+<li>number：数字。 整数/小数/<code>NaN</code>(比如字符串转换失败的数字<code>"123aa"</code>)</li>
+<li>string：字符串。 字符串  “abc” “a” ‘abc’</li>
+<li>boolean: true和false</li>
+<li>null：一个对象为空的占位符</li>
+<li>undefined：未定义。如果一个变量没有给初始化值，则会被默认赋值为undefined</li>
+</ol>
+</li>
+<li><p>引用数据类型：对象</p>
+</li>
+</ul>
+<h4 id="4-2-4变量"><a href="#4-2-4变量" class="headerlink" title="4.2.4变量"></a>4.2.4变量</h4><ul>
+<li><p>变量：一小块存储数据的内存空间</p>
+</li>
+<li><p>Java语言是<strong>强类型语言</strong>，而JavaScript是<strong>弱类型语言。</strong></p>
+<pre><code>  * 强类型：在开辟变量存储空间时，定义了空间将来存储的数据的数据类型。**只能存储固定类型的数据**。</code></pre><ul>
+<li>弱类型：在开辟变量存储空间时，不定义空间将来的存储数据类型，<strong>可以存放任意类型的数据</strong>。</li>
+</ul>
+</li>
+<li><p>语法：</p>
+<ul>
+<li><p>var 变量名 = 初始化值;</p>
+</li>
+<li><p>typeof运算符：获取变量的类型。</p>
+<p>注：null运算后得到的是object</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-2-5运算"><a href="#4-2-5运算" class="headerlink" title="4.2.5运算"></a>4.2.5运算</h4><ol>
+<li><p><strong>一元运算符</strong>：只有一个运算数的运算符</p>
+<ul>
+<li><code>++</code>与<code>--</code>：自增、自减</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p> 混合用：前++先运算在使用，后++先用后运算。（运算即自增、自减）</p>
+</blockquote>
+<ul>
+<li><code>+(-)</code>：正负号</li>
+</ul>
+<blockquote>
+<p>注意：在JS中，如果运算数不是运算符所要求的类型，那么js引擎会自动的<strong>将运算数进行类型转换</strong></p>
+</blockquote>
+<ul>
+<li><p>其他类型转number：</p>
+<ul>
+<li><p>string转number：按照字面值转换。如果字面值不是数字，则转为<strong>NaN</strong>（不是数字的数字）</p>
+</li>
+<li><p>boolean转number：true转为1，false转为0</p>
+<p><img src="https://raw.githubusercontent.com/black210/images/master/demo/202003/10/154133-541940.png" alt="js一元运算"></p>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li><p><strong>算数运算符</strong></p>
+<ul>
+<li><code>+ - * / %</code>…</li>
+</ul>
+</li>
+<li><p><strong>赋值运算符</strong></p>
+<ul>
+<li><code>= += -+=</code>….</li>
+</ul>
+</li>
+<li><p><strong>比较运算符</strong></p>
+<ul>
+<li><p><code>&gt; &lt; &gt;= &lt;= == ===(全等于)</code></p>
+</li>
+<li><p>比较方式</p>
+<ol>
+<li>类型相同：直接比较<ul>
+<li>字符串：按照字典顺序比较。按位逐一比较，直到得出大小为止。</li>
+</ul>
+</li>
+<li>类型不同：先进行类型转换，再比较<ul>
+<li><code>===</code>：全等于。在比较之前，<strong>先判断类型</strong>，如果类型不一样，则直接返回false</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><strong>逻辑运算符</strong></p>
+<ul>
+<li><code>&amp;&amp; || !</code></li>
+</ul>
+<ul>
+<li>其他类型转boolean：<ol>
+<li>number：0或NaN为假，其他为真</li>
+<li>string：除了空字符串(<code>""</code>)，其他都是true</li>
+<li><code>null</code>&amp;<code>undefined</code>:都是false</li>
+<li>对象：所有对象都为true</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><strong>三元运算符</strong></p>
+<ul>
+<li><p>语法：</p>
+<pre><code> * `表达式? 值1:值2;`</code></pre><ul>
+<li><p>判断表达式的值，如果是*<em>true *</em>则取值1，如果是 false 则取值2；</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> c <span class="token operator">=</span> a <span class="token operator">></span> b <span class="token operator">?</span> <span class="token number">1</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="4-2-6流程控制语句"><a href="#4-2-6流程控制语句" class="headerlink" title="4.2.6流程控制语句"></a>4.2.6流程控制语句</h4><ol>
+<li><p><code>if...else...</code></p>
+</li>
+<li><p><code>switch:</code></p>
+<ul>
+<li><p>在java中，switch语句可以接受的数据类型： </p>
+<p>  <code>byte</code> <code>int</code> <code>shor</code> <code>char</code>,<code>枚举</code>(1.5) ,<code>String</code>(1.7)</p>
+</li>
+<li><p>在JS中,switch语句可以接受任意的原始数据类型</p>
+</li>
+</ul>
+</li>
+<li><p><code>while</code></p>
+</li>
+<li><p><code>do...while</code></p>
+</li>
+<li><p><code>for</code>        </p>
+</li>
+</ol>
+<h4 id="4-2-7-JS特殊语法"><a href="#4-2-7-JS特殊语法" class="headerlink" title="4.2.7 JS特殊语法"></a>4.2.7 JS特殊语法</h4><ol>
+<li><p>语句以;结尾，如果一行只有一条语句则 ;可以省略 (不建议)</p>
+</li>
+<li><p>变量的定义使用<code>var</code>关键字，也可以不使用</p>
+<ul>
+<li><p>用： 定义的变量是<strong>局部变量</strong></p>
+</li>
+<li><p>不用：定义的变量是<strong>全局变量</strong>(不建议)</p>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p> tips：若定义在方法内部，需要调用才可使用。</p>
+</blockquote>
+<h4 id="4-2-8基本对象"><a href="#4-2-8基本对象" class="headerlink" title="4.2.8基本对象"></a>4.2.8基本对象</h4><ol>
+<li><p><strong>Function</strong>：函数(方法)对象</p>
+<ul>
+<li><p>创建方式：</p>
+<pre class=" language-javascript"><code class="language-javascript"> <span class="token number">1</span><span class="token punctuation">.</span> <span class="token keyword">var</span> fun <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Function</span><span class="token punctuation">(</span>形式参数列表<span class="token punctuation">,</span>方法体<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//忘掉吧</span>
+ <span class="token number">2</span><span class="token punctuation">.</span> 
+     <span class="token keyword">function</span> <span class="token function">方法名称</span><span class="token punctuation">(</span>形式参数列表<span class="token punctuation">)</span><span class="token punctuation">{</span>
+              方法体
+     <span class="token punctuation">}</span>
+
+ <span class="token number">3</span><span class="token punctuation">.</span> 
+        <span class="token keyword">var</span> 方法名 <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>形式参数列表<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                        方法体
+         <span class="token punctuation">}</span></code></pre>
+</li>
+<li><p>属性：</p>
+<ul>
+<li>length:代表形参的个数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>特点：</p>
+<ol>
+<li>方法定义是，<strong>形参的类型不用写,返回值类型也不写。</strong></li>
+<li>方法是一个对象，如果定义名称<strong>相同的方法</strong>，<strong>会覆盖</strong></li>
+<li>在JS中，方法的调用<strong>只与方法的名称有关</strong>，和参数列表无关</li>
+<li>在方法声明中有一个隐藏的内置对象（数组），arguments,封装所有的实际参数</li>
+</ol>
+</li>
+<li><p>调用：</p>
+<p>​    方法名称(实际参数列表);</p>
+</li>
+</ul>
+<ol start="2">
+<li><p><strong>Array</strong>:数组对象</p>
+<ul>
+<li>创建：<ul>
+<li><code>var arr = new Array(元素列表);</code></li>
+<li><code>var arr = new Array(默认长度);</code></li>
+<li><code>var arr = [元素列表];</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>方法</p>
+<ul>
+<li><p>join(参数):将数组中的元素按照指定的<strong>分隔符拼接为字符串</strong></p>
+</li>
+<li><p>push()：向数组的末尾添加一个或更多元素，并返回新的长度。</p>
+<ul>
+<li><p>属性</p>
+</li>
+<li><p>length:数组的长度</p>
+</li>
+<li><p>特点：</p>
+</li>
+</ul>
+</li>
+<li><p>JS中，数组元素的<strong>类型可变</strong>的，数组<strong>长度可变</strong>的。</p>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li><p><strong>Boolean</strong></p>
+</li>
+<li><p><strong>Date</strong>：日期对象</p>
+<ul>
+<li>创建：<pre><code>    `var date = new Date();`</code></pre></li>
+<li>方法：<ul>
+<li><code>toLocaleString()</code>：返回当前date对象对应的时间本地字符串格式</li>
+<li><code>getTime()</code>:获取毫秒值。返回当前如期对象描述的时间到1970年1月1日零点的毫秒值差</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Math</strong>：数学对象</p>
+<ul>
+<li><p>创建：</p>
+<ul>
+<li>特点：Math对象不用创建，<strong>直接使用。</strong>   <code>Math.方法名();</code></li>
+</ul>
+</li>
+<li><p>方法：</p>
+<ul>
+<li><code>random()</code>:返回 0 ~ 1 之间的随机数。 含0不含1</li>
+<li><code>ceil(x)</code>：对数进行上舍入。</li>
+<li><code>floor(x)</code>：对数进行下舍入。</li>
+<li><code>round(x)</code>：把数四舍五入为最接近的整数。</li>
+</ul>
+</li>
+<li><p>属性：  <code>PI</code>  圆周率</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Number</strong></p>
+</li>
+<li><p><strong>String</strong></p>
+</li>
+<li><p><strong>Global</strong></p>
+<ul>
+<li><p>特点：全局对象，这个Global中封装的方法不需要对象就可以直接调用。  <code>方法名();</code></p>
+</li>
+<li><p>方法：</p>
+<ul>
+<li><p><code>encodeURI()</code>:urI编码</p>
+</li>
+<li><p><code>decodeURI()</code>:urI解码</p>
+</li>
+<li><p><code>encodeURIComponent()</code>:url编码,编码的字符更多(解析含有分隔符，比如 ? 和 #)</p>
+</li>
+<li><p><code>decodeURIComponent()</code>:url解码</p>
+</li>
+<li><p><code>parseInt()</code>:将字符串转为数字</p>
+</li>
+</ul>
+<blockquote>
+<p>逐一判断每一个字符是否是数字，直到不是数字为止，将前边数字部分转为number</p>
+</blockquote>
+</li>
+<li><p><code>isNaN()</code>:判断一个值是否是NaN</p>
+<blockquote>
+<p>NaN六亲不认，连自己都不认。NaN参与的==比较全部问false</p>
+</blockquote>
+</li>
+<li><p><code>eval()</code>:讲 JavaScript 字符串，并把它作为脚本代码来执行。    </p>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>URl编码： %E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2</li>
+</ul>
+<h5 id="9-RegExp：正则表达式对象"><a href="#9-RegExp：正则表达式对象" class="headerlink" title="9.RegExp：正则表达式对象"></a>9.RegExp：正则表达式对象</h5><ul>
+<li><p><strong>正则表达式</strong>：定义字符串的组成规则。</p>
+</li>
+<li><p>欲更详细，参考链接：<a href="https://www.w3school.com.cn/jsref/jsref_obj_regexp.asp" target="_blank" rel="noopener">https://www.w3school.com.cn/jsref/jsref_obj_regexp.asp</a></p>
+<ul>
+<li><p>单个字符:<code>[]</code>：方括号用于查找某个范围内的字符：</p>
+<ul>
+<li>如： <code>[a]</code> <code>[ab]</code> <code>[a-zA-Z0-9_]</code></li>
+</ul>
+</li>
+<li><p>元字符:代表特殊含义的单个字符:</p>
+<ul>
+<li><code>\d</code>:单个数字字符 [0-9]</li>
+<li><code>\w</code>:单个单词字符[a-z A-Z 0-9]</li>
+</ul>
+</li>
+<li><p>量词符号：</p>
+<ul>
+<li><p><code>?</code>：表示出现0次或1次</p>
+</li>
+<li><p><code>*</code>：表示出现0次或多次</p>
+</li>
+<li><p><code>+</code>：出现1次或多次</p>
+</li>
+<li><p><code>{m,n}</code>:表示 m&lt;= 数量 &lt;= n</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>m如果缺省： <code>{,n}</code><strong>最多n次</strong></p>
+<p> n如果缺省：<code>{m,}</code> <strong>最少m次</strong></p>
+</blockquote>
+<ul>
+<li>开始结束符号<ul>
+<li><code>^</code>:开始</li>
+<li><code>$</code>:结束</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>正则对象：</strong></p>
+<ul>
+<li><p>创建</p>
+<ul>
+<li><code>var reg = new RegExp("正则表达式");</code></li>
+<li><code>var reg = /正则表达式/;</code></li>
+</ul>
+</li>
+<li><p>方法</p>
+<ul>
+<li><code>test(参数)</code>:验证指定的字符串是否符合正则定义的规范    </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-3BOM"><a href="#4-3BOM" class="headerlink" title="4.3BOM"></a>4.3BOM</h3><h4 id="4-3-1概述"><a href="#4-3-1概述" class="headerlink" title="4.3.1概述"></a>4.3.1概述</h4><ol>
+<li><p>概念：Browser Object Model  <strong>浏览器对象模型</strong></p>
+<ul>
+<li>将浏览器的各个组成部分封装成对象。</li>
+</ul>
+</li>
+<li><p>组成：</p>
+<ul>
+<li>Window：窗口对象</li>
+<li>Navigator：浏览器对象</li>
+<li>Screen：显示器屏幕对象</li>
+<li>History：历史记录对象</li>
+<li>Location：地址栏对象</li>
+</ul>
+</li>
+</ol>
+<h4 id="4-3-2Window：窗口对象"><a href="#4-3-2Window：窗口对象" class="headerlink" title="4.3.2Window：窗口对象"></a>4.3.2Window：窗口对象</h4><blockquote>
+<p><strong>方法</strong></p>
+</blockquote>
+<ul>
+<li><p>与<strong>弹出框</strong>有关的方法：</p>
+<ul>
+<li><p><code>alert()</code>    显示带有一段消息和一个确认按钮的警告框。</p>
+</li>
+<li><p><code>confirm()</code>    显示带有一段消息以及确认按钮和取消按钮的对话框。</p>
+<ul>
+<li>如果用户点击确定按钮，则方法返回true</li>
+<li>如果用户点击取消按钮，则方法返回false</li>
+</ul>
+</li>
+<li><p><code>prompt()</code>    显示可提示用户输入的对话框。</p>
+</li>
+<li><p>返回值：获取用户输入的值</p>
+</li>
+</ul>
+</li>
+<li><p>与<strong>打开关闭</strong>有关的方法：</p>
+<ul>
+<li><code>close()</code>    关闭浏览器窗口。</li>
+</ul>
+</li>
+<li><p>谁调用我 ，我关谁</p>
+<ul>
+<li><code>open()</code>    打开一个新的浏览器窗口</li>
+</ul>
+</li>
+<li><p>返回新的Window对象</p>
+</li>
+<li><p>与<strong>定时器</strong>有关的方式</p>
+<ul>
+<li><p><code>setTimeout()</code>    在指定的毫秒数后调用函数或计算表达式。</p>
+<ul>
+<li><p>参数：</p>
+<blockquote>
+<p>1.js代码或者方法对象    </p>
+<p>2.毫秒值</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>返回值：唯一标识，用于取消定时器</li>
+</ul>
+</li>
+<li><p><code>clearTimeout()</code>    取消由 setTimeout() 方法设置的 timeout。</p>
+</li>
+<li><p><code>setInterval()</code>    按照指定的<strong>周期</strong>（以毫秒计）来调用函数或计算表达式。</p>
+</li>
+<li><p><code>clearInterval()</code>    取消由 setInterval() 设置的 timeout。</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>属性：</strong></p>
+</blockquote>
+<ul>
+<li>获取其他BOM对象：<ul>
+<li>history</li>
+<li>location</li>
+<li>Navigator</li>
+<li>Screen:</li>
+</ul>
+</li>
+<li>获取DOM对象<ul>
+<li>document</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>特点</strong>：</p>
+</blockquote>
+<ul>
+<li><p>Window对象不需要创建<strong>可以直接使用</strong> window使用。 window.方法名();</p>
+</li>
+<li><p><strong>window引用可以省略</strong>。  <code>方法名();</code></p>
+</li>
+</ul>
+<h4 id="4-3-3Location：地址栏对象"><a href="#4-3-3Location：地址栏对象" class="headerlink" title="4.3.3Location：地址栏对象"></a>4.3.3Location：地址栏对象</h4><ul>
+<li>创建(获取)：<ol>
+<li>window.location</li>
+<li>location</li>
+</ol>
+</li>
+<li>方法：<ul>
+<li><code>reload()</code>    重新加载当前文档。刷新</li>
+</ul>
+</li>
+<li>属性<ul>
+<li><code>href</code>    设置或返回完整的 URL。</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-3-4History：历史记录对象"><a href="#4-3-4History：历史记录对象" class="headerlink" title="4.3.4History：历史记录对象"></a>4.3.4History：历史记录对象</h4><ul>
+<li>创建(获取)：<ol>
+<li>window.history</li>
+<li>history</li>
+</ol>
+</li>
+<li>方法：<ul>
+<li><code>back()</code>    加载 history 列表中的前一个 URL。</li>
+<li><code>forward()</code>    加载 history 列表中的下一个 URL。</li>
+<li><code>go(参数)</code>    加载 history 列表中的某个具体页面。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>参数：<ul>
+<li>正数：前进几个历史记录</li>
+<li>负数：后退几个历史记录</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>属性：<ul>
+<li><code>length</code>    返回当前窗口历史列表中的 URL 数量。</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-4DOM"><a href="#4-4DOM" class="headerlink" title="4.4DOM"></a>4.4DOM</h3><h4 id="4-4-1概述"><a href="#4-4-1概述" class="headerlink" title="4.4.1概述"></a>4.4.1概述</h4><ul>
+<li><p>概念： Document Object Model <strong>文档对象模型</strong></p>
+<ul>
+<li>将标记语言文档的各个组成部分，封装为对象。可以使用这些对象，对标记语言文档进行CRUD的动态操作。</li>
+</ul>
+</li>
+<li><p>W3C DOM 标准被分为 3 个不同的部分：</p>
+<ul>
+<li><p><strong>核心 DOM</strong> - 针对任何结构化文档的标准模型</p>
+<ul>
+<li><p>Document：文档对象</p>
+</li>
+<li><p>Element：元素对象</p>
+</li>
+<li><p>Attribute：属性对象</p>
+</li>
+<li><p>Text：文本对象</p>
+</li>
+<li><p>Comment:注释对象</p>
+</li>
+<li><p>Node：节点对象，其他5个的父对象</p>
+</li>
+</ul>
+</li>
+<li><p><strong>XML DOM</strong>： 针对 XML 文档的标准模型</p>
+</li>
+<li><p><strong>HTML DOM</strong> ：针对 HTML 文档的标准模型</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-4-2核心DOM"><a href="#4-4-2核心DOM" class="headerlink" title="4.4.2核心DOM"></a>4.4.2核心DOM</h4><ul>
+<li><p><strong>Document</strong>：文档对象</p>
+<ul>
+<li>创建(获取)：在html dom模型中可以使用window对象来获取<ul>
+<li>window.document</li>
+<li>document</li>
+</ul>
+</li>
+<li>方法：<ol>
+<li>获取Element对象：<ul>
+<li><code>getElementById()</code>    ： 根据id属性值获取元素对象。id属性值一般唯一</li>
+<li><code>getElementsByTagName()</code>：根据元素名称获取元素对象们。返回值是一个数组</li>
+<li><code>getElementsByClassName():</code>根据Class属性值获取元素对象们。返回值是一个数组</li>
+<li><code>getElementsByName():</code> 根据name属性值获取元素对象们。返回值是一个数组</li>
+</ul>
+</li>
+<li>创建其他DOM对象：<ul>
+<li><code>createAttribute(name)</code></li>
+<li><code>createComment()</code></li>
+<li><code>createElement()</code></li>
+<li><code>createTextNode()</code></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><strong>Element</strong>：元素对象</p>
+<ul>
+<li>获取/创建：通过document来获取和创建</li>
+<li>方法：<ul>
+<li><code>removeAttribute()</code>：删除属性</li>
+<li><code>setAttribute()</code>：设置属性</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Node</strong>：节点对象，其他5个的父对象</p>
+<ul>
+<li><p>特点：所有dom对象都可以被认为是一个节点</p>
+</li>
+<li><p>方法：</p>
+<p>CRUD dom树：</p>
+<ul>
+<li><code>appendChild()</code>：向节点的子节点列表的结尾添加新的子节点。</li>
+<li><code>removeChild()</code>    ：删除（并返回）当前节点的指定子节点。</li>
+<li><code>replaceChild()</code>：用新节点替换一个子节点。</li>
+</ul>
+</li>
+<li><p>属性：</p>
+<ul>
+<li><code>parentNode</code> 返回节点的父节点。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-4-3HTML-DOM"><a href="#4-4-3HTML-DOM" class="headerlink" title="4.4.3HTML DOM"></a>4.4.3HTML DOM</h4><ul>
+<li><p>标签体的设置和获取：<code>innerHTML</code></p>
+</li>
+<li><p>使用html元素对象的属性</p>
+</li>
+<li><p>控制元素样式</p>
+<ol>
+<li><p>使用<strong>元素的style</strong>属性来设置</p>
+<p>如：</p>
+<pre class=" language-javascript"><code class="language-javascript">        <span class="token comment" spellcheck="true">//修改样式方式1</span>
+     div1<span class="token punctuation">.</span>style<span class="token punctuation">.</span>border <span class="token operator">=</span> <span class="token string">"1px solid red"</span><span class="token punctuation">;</span>
+     div1<span class="token punctuation">.</span>style<span class="token punctuation">.</span>width <span class="token operator">=</span> <span class="token string">"200px"</span><span class="token punctuation">;</span>
+         <span class="token comment" spellcheck="true">//font-size--> fontSize</span>
+     div1<span class="token punctuation">.</span>style<span class="token punctuation">.</span>fontSize <span class="token operator">=</span> <span class="token string">"20px"</span><span class="token punctuation">;</span>    </code></pre>
+</li>
+<li><p>提前<strong>定义好类选择器</strong>的样式，通过元素的 className 属性来设置其 class 属性值。</p>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="4-4-4事情监听"><a href="#4-4-4事情监听" class="headerlink" title="4.4.4事情监听"></a>4.4.4事情监听</h4><ul>
+<li><p><strong>概念</strong>：某些组件被执行了某些操作后，触发某些代码的执行。    </p>
+<ul>
+<li>事件：某些操作。如： 单击，双击，键盘按下了，鼠标移动了<ul>
+<li>事件源：组件。如： 按钮 文本输入框…</li>
+</ul>
+</li>
+<li>监听器：代码。</li>
+<li>注册监听：将事件，事件源，监听器结合在一起。 当事件源上发生了某个事件，则触发执行某个监听器代码。</li>
+</ul>
+</li>
+<li><p><strong>常见的事件：</strong></p>
+<ul>
+<li><strong>点击事件</strong>：<ul>
+<li>onclick：单击事件</li>
+<li>ondblclick：双击事件</li>
+</ul>
+</li>
+<li><strong>焦点事件</strong><ul>
+<li>onblur：失去焦点</li>
+<li>onfocus:元素获得焦点。</li>
+</ul>
+</li>
+<li><strong>加载事件：</strong><ul>
+<li>onload：一张页面或一幅图像完成加载。</li>
+</ul>
+</li>
+<li><strong>加载事件：</strong><ul>
+<li>onload：一张页面或一幅图像完成加载。</li>
+</ul>
+</li>
+<li><strong>鼠标事件：</strong><ol>
+<li>onmousedown    鼠标按钮被按下。</li>
+<li>onmouseup    鼠标按键被松开。</li>
+<li>onmousemove    鼠标被移动。</li>
+<li>onmouseover    鼠标移到某元素之上。</li>
+<li>onmouseout    鼠标从某元素移开。</li>
+</ol>
+</li>
+<li><strong>键盘事件：</strong><ul>
+<li>onkeydown    某个键盘按键被按下。    </li>
+<li>onkeyup        某个键盘按键被松开。</li>
+<li>onkeypress    某个键盘按键被按下并松开。</li>
+</ul>
+</li>
+<li><strong>选择和改变</strong><ul>
+<li>onchange    域的内容被改变。</li>
+<li>onselect    文本被选中。</li>
+</ul>
+</li>
+<li><strong>表单事件：</strong><ul>
+<li>onsubmit    确认按钮被点击。</li>
+<li>onreset    重置按钮被点击。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-JSP"><a href="#5-JSP" class="headerlink" title="5.JSP"></a>5.JSP</h2><ul>
+<li><p><strong>指令</strong></p>
+<ul>
+<li>作用：用于配置JSP页面，导入资源文件</li>
+</ul>
+<ul>
+<li>格式：<code>&lt;%@ 指令名称 属性名1=属性值1 属性名2=属性值2 ... %&gt;</code></li>
+</ul>
+<ul>
+<li><p>分类：</p>
+<ol>
+<li><p><strong>page</strong>： 配置 JSP 页面的</p>
+<ul>
+<li><code>contentType</code>：等同于response.setContentType()</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>1.设置响应体的mime类型以及字符集</p>
+<p>2.设置当前jsp页面的编码（只能是高级的IDE才能生效，如果使用低级工具，则需要设置pageEncoding属性设置当前页面的字符集）</p>
+</blockquote>
+<ul>
+<li><p><code>import</code>：导包</p>
+</li>
+<li><p><code>errorPage</code>：当前页面发生异常后，会自动跳转到指定的错误页面</p>
+</li>
+<li><p><code>isErrorPage</code>：标识当前也是是否是错误页面。</p>
+</li>
+</ul>
+<blockquote>
+<p>1.true：是，可以使用内置对象exception</p>
+<p>2.false：否。默认值。不可以使用内置对象exception</p>
+</blockquote>
+<ol start="2">
+<li><p><strong>include</strong>： 页面包含的。导入页面的资源文件</p>
+<pre class=" language-html"><code class="language-html">  &lt;%@include file="top.jsp"%></code></pre>
+</li>
+<li><p><strong>taglib</strong>： 导入资源</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%@</span> <span class="token attr-name">taglib</span> <span class="token attr-name">prefix</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>c<span class="token punctuation">"</span></span> <span class="token attr-name">uri</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://java.sun.com/jsp/jstl/core<span class="token punctuation">"</span></span> <span class="token attr-name">%</span><span class="token punctuation">></span></span></code></pre>
+<p><code>prefix</code>：前缀，自定义的</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><strong>注释:</strong></p>
+<ul>
+<li>html注释：<code>&lt;!-- --&gt;</code>: 只能注释html代码片段</li>
+<li>jsp注释：（推荐使用）<code>&lt;%-- --%&gt;</code>：可以<strong>注释所有</strong></li>
+</ul>
+</li>
+<li><p><strong>内置对象</strong></p>
+<ul>
+<li><p>在jsp页面中不需要创建，<strong>直接使用的对象</strong></p>
+</li>
+<li><p>一共有9个：前面4个为<strong>域对象</strong></p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>真实类型</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>pageContext</td>
+<td>PageContext</td>
+<td>当前页面共享数据，还可以获取其他八个内置对象</td>
+</tr>
+<tr>
+<td>request</td>
+<td>HttpServletRequest</td>
+<td>一次请求访问的多个资源(转发)</td>
+</tr>
+<tr>
+<td>session</td>
+<td>HttpSession</td>
+<td>一次会话的多个请求间</td>
+</tr>
+<tr>
+<td>application</td>
+<td>ServletContext</td>
+<td>所有用户间共享数据</td>
+</tr>
+<tr>
+<td>response</td>
+<td>HttpServletResponse</td>
+<td>响应对象</td>
+</tr>
+<tr>
+<td>page</td>
+<td>Object</td>
+<td>当前页面(Servlet)的对象   <strong>this</strong></td>
+</tr>
+<tr>
+<td>out</td>
+<td>JspWriter</td>
+<td>输出对象，数据输出到页面上</td>
+</tr>
+<tr>
+<td>config</td>
+<td>ServletConfig</td>
+<td>Servlet的配置对象</td>
+</tr>
+<tr>
+<td>exception</td>
+<td>Throwable</td>
+<td>异常对象</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="6-EL表达式"><a href="#6-EL表达式" class="headerlink" title="6.EL表达式"></a>6.EL表达式</h2><ol>
+<li><p>概念：Expression Language <strong>表达式语言</strong></p>
+</li>
+<li><p>作用：*<em>替换和简化 *</em>jsp 页面中java代码的编写。</p>
+</li>
+<li><p>语法：<code>${表达式}</code></p>
+<ul>
+<li><p>注意：jsp默认支持el表达式的。如果要<strong>忽略 el 表达式</strong></p>
+<ul>
+<li>设置jsp中page指令中：<code>isELIgnored="true"</code> 忽略当前jsp页面中所有的el表达式</li>
+<li><code>\${表达式}</code> ：忽略当前这个el表达式</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p><strong>运算</strong>：</p>
+<ul>
+<li>运算符：<ul>
+<li>算数运算符： <code>+ - * /(div) %(mod)</code></li>
+<li>比较运算符： <code>&gt; &lt; &gt;= &lt;= == !=</code></li>
+<li>逻辑运算符： <code>&amp;&amp;(and) ||(or) !(not)</code></li>
+<li>空运算符： <code>empty</code></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>功能：用于判断字符串、集合、数组对象是否为null或者长度是否为0</li>
+<li><code>${empty list}</code>:判断字符串、集合、数组对象<strong>是否为null或者长度为0</strong></li>
+<li><code>${not empty str}</code>:表示判断字符串、集合、数组对象<strong>是否不为null 并且 长度&gt;0</strong></li>
+</ul>
+</li>
+<li><p><strong>获取值</strong></p>
+</li>
+<li><p>el表达式只能从<strong>域对象中</strong>获取值</p>
+</li>
+<li><p>语法：</p>
+<ul>
+<li><p><code>${域名称.键名}</code>：<strong>从指定域中获取指定键的值</strong></p>
+</li>
+<li><p>域名称：</p>
+<table>
+<thead>
+<tr>
+<th>pageScope</th>
+<th>pageContext</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>requestScope</td>
+<td>request</td>
+</tr>
+<tr>
+<td>sessionScope</td>
+<td>session</td>
+</tr>
+<tr>
+<td>applicationScope</td>
+<td>application（ServletContext）</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>举例：在request域中存储了<code>name=张三</code></p>
+</li>
+<li><p>获取：<code>${requestScope.name}</code></p>
+</li>
+</ul>
+</li>
+<li><p><code>${键名}</code>：表示依次从最小的域中查找是否有该键对应的值，直到找到为止。</p>
+</li>
+<li><p>获取对象、List集合、Map集合的值</p>
+<ol>
+<li>对象：<code>${域名称.键名.属性名}</code><ul>
+<li>本质上会去调用对象的getter方法</li>
+</ul>
+</li>
+<li>List集合：<code>${域名称.键名[索引]}</code></li>
+<li>Map集合：</li>
+</ol>
+<ul>
+<li><code>${域名称.键名.key名称}</code></li>
+<li><code>${域名称.键名["key名称"]}</code></li>
+</ul>
+</li>
+<li><p><strong>隐式对象：</strong></p>
+<ul>
+<li>el表达式中有11个隐式对象</li>
+<li><strong>pageContext</strong>：<ul>
+<li>获取jsp其他八个内置对象<pre><code>  * `${pageContext.request.contextPath}`：动态获取虚拟目录</code></pre></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-JSTL"><a href="#7-JSTL" class="headerlink" title="7.JSTL"></a>7.JSTL</h2><ol>
+<li><p>概念：JavaServer Pages Tag Library  <strong>JSP标准标签库</strong></p>
+<ul>
+<li>是由Apache组织提供的开源的免费的jsp标签        <code>&lt;标签&gt;</code></li>
+</ul>
+</li>
+<li><p>作用：用于简化和替换jsp页面上的java代码        </p>
+</li>
+<li><p><strong>使用步骤：</strong></p>
+<ol>
+<li>导入jstl相关jar包</li>
+<li>引入标签库：taglib指令：  <code>&lt;%@ taglib %&gt;</code></li>
+</ol>
+</li>
+<li><p>使用标签</p>
+</li>
+<li><p><strong>常用的JSTL标签</strong></p>
+<ul>
+<li><code>if</code>:相当于java代码的if语句</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>属性：</p>
+</blockquote>
+<ul>
+<li><code>test</code>  必须属性，接受boolean表达式<ul>
+<li>如果表达式为true，则显示if标签体内容，如果为false，则不显示标签体内容</li>
+<li>一般情况下，test属性值会结合el表达式一起使用</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>注意：</p>
+</blockquote>
+<ul>
+<li><code>c:if</code>标签没有else情况，想要else情况，则可以<strong>再定义</strong>一个<code>c:if</code>标签</li>
+</ul>
+<pre class=" language-html"><code class="language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">c:</span>if</span> <span class="token attr-name">test</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>${not empty list}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        遍历集合...
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">c:</span>if</span><span class="token punctuation">></span></span></code></pre>
+<ul>
+<li><p><code>choose</code>:相当于java代码的switch语句</p>
+<ul>
+<li>使用choose标签声明                     相当于switch声明</li>
+<li>使用when标签做判断                     相当于case</li>
+<li>使用otherwise标签做其他情况的声明        相当于default</li>
+</ul>
+<pre class=" language-html"><code class="language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">c:</span>choose</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">c:</span>when</span> <span class="token attr-name">test</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>${number <span class="token punctuation">=</span><span class="token punctuation">=</span> 1}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>星期一<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">c:</span>when</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">c:</span>when</span> <span class="token attr-name">test</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>${number <span class="token punctuation">=</span><span class="token punctuation">=</span> 2}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>星期二<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">c:</span>when</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">c:</span>when</span> <span class="token attr-name">test</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>${number <span class="token punctuation">=</span><span class="token punctuation">=</span> 3}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>星期三<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">c:</span>when</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">c:</span>when</span> <span class="token attr-name">test</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>${number <span class="token punctuation">=</span><span class="token punctuation">=</span> 4}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>星期四<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">c:</span>when</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">c:</span>when</span> <span class="token attr-name">test</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>${number <span class="token punctuation">=</span><span class="token punctuation">=</span> 5}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>星期五<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">c:</span>when</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">c:</span>when</span> <span class="token attr-name">test</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>${number <span class="token punctuation">=</span><span class="token punctuation">=</span> 6}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>星期六<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">c:</span>when</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">c:</span>when</span> <span class="token attr-name">test</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>${number <span class="token punctuation">=</span><span class="token punctuation">=</span> 7}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>星期天<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">c:</span>when</span><span class="token punctuation">></span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">c:</span>otherwise</span><span class="token punctuation">></span></span>数字输入有误<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">c:</span>otherwise</span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">c:</span>choose</span><span class="token punctuation">></span></span></code></pre>
+</li>
+<li><p><code>foreach</code>:相当于java代码的for语句</p>
+<ul>
+<li><p>items:容器对象</p>
+<ul>
+<li>var:容器中元素的临时变量</li>
+<li>varStatus:循环状态对象</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>index:容器中元素的索引，<strong>从0开始</strong></p>
+<p>count:循环次数，<strong>从1开始</strong></p>
+</blockquote>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">c:</span>forEach</span> <span class="token attr-name">begin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">end</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span> <span class="token attr-name">var</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>i<span class="token punctuation">"</span></span> <span class="token attr-name">step</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span> <span class="token attr-name">varStatus</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>s<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+${i} <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">></span></span>${s.index}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">></span></span> ${s.count} <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">c:</span>forEach</span><span class="token punctuation">></span></span></code></pre>
+</li>
+</ul>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://black210.github.io" rel="external nofollow noreferrer">Black</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://black210.github.io/2020/03/09/web-yi/">https://black210.github.io/2020/03/09/web-yi/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://black210.github.io" target="_blank">Black</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Web/">
+                                    <span class="chip bg-color">Web</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/03/12/web-er/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Web（二）">
+                        
+                        <span class="card-title">Web（二）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Web（二）前言​    目的：简要的复习web前端知识
+​    主参考链接：https://www.w3school.com.cn/
+1.JQuery1.1概述
+概念： 一个JavaScript框架。简化JS开发。
+
+
+jQuery是一
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-12
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Web/">
+                        <span class="chip bg-color">Web</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/03/05/spring-ioc-yuan-ma-fen-xi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Spring IOC源码分析">
+                        
+                        <span class="card-title">Spring IOC源码分析</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Spring IOC源码分析1.前言目的：记录IOC源码挖掘过程
+参考链接：https://www.javadoop.com/post/spring-ioc
+要说的 IOC 总体来说有两处地方最重要，一个是创建 Bean 容器，一个是初始化
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+    
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="https://black210.github.io" target="_blank">Black</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/black210" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:913913144@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=913913144" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 913913144" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
